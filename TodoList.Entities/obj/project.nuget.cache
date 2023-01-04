@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "y83jy6KrxThYy9jqrre24EcccO23+SVbgKHIBdqBCd/iE3oyeNMtL+YDhSM/pvT+oIscSMq39oOYoRm1J7zD6g==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Entities\\TodoList.Entities.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
