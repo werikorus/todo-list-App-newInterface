@@ -1,0 +1,18 @@
+obj/
+bin/
+.idea/
+**/coverage.opencover.xml
+**/coveragereport/
+.vscode
+**/TestResults/**
+packages/
+# understand
+artifacts/
+*.udb
+
+# Coverage
+coverage/
+
+# lcov
+**/lcov.info
+**/lcov.opencover.xml

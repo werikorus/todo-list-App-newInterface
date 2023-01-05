@@ -1,6 +1,8 @@
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using TodoList.Services.Interfaces;
 using TodoList.Services.Mappers;
+using TodoList.Services.Services;
 using TodoList.Services.Validators;
 
 namespace TodoList.Services.Ioc;
@@ -15,5 +17,4 @@ public static class IoCServices
 
     public static IMvcCoreBuilder AddFluentValidation(this IMvcCoreBuilder builder)
         => builder.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserModelValidator>());
-
 }

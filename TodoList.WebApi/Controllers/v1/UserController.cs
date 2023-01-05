@@ -1,50 +1,41 @@
 using Microsoft.AspNetCore.Mvc;
-using TodoList.Domain.Entities.Users;
-using TodoList.Services;
-using TodoList.Services.Models;
 using TodoList.Domain.Abstraction.Notifications;
+using TodoList.Domain.Entities.Users;
+using TodoList.Services.Models;
+using TodoList.Services.Interfaces;
 
 namespace TodoList.WebApi.Controllers.v1;
-[ApiVersion("1")]
 
+[ApiVersion("1")]
 public class UserController : TodoListControllerBase
 {
     private readonly IUserService _userService;
-
 
     public UserController(IUserService userService)
     {
         _userService = userService;
     }
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(Guid id)
+    [HttpGet("{id}")]
+    public IActionResult GetById(Guid id)
     {
-        if (_userService.Exists(id) == false) return NotFound();
-        
-        _userService.Delete(id);
-        return Accepted();
+        if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+
+        var user = _userService.GetById(id);
+
+        return (user is null)
+            ? NoContent()
+            : Ok(user);
     }
 
     [HttpGet]
     public ActionResult<IEnumerable<User>> GetAll()
     {
         var users = _userService.GetAll();
-        if (users.Count == 0) return NotFound();
 
-        return Ok(users);
-    }
-
-    [HttpGet]
-    public IActionResult GetById(Guid id)
-    {
-        if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
-
-        var user = _userService.GetById(id);
-        
-        if (user is null) return NotFound("User not found!");
-
-        return Ok(user);
+        return (users.Count == 0)
+            ? NotFound()
+            : Ok(users);
     }
 
     [HttpPost]
@@ -68,8 +59,18 @@ public class UserController : TodoListControllerBase
         if (_userService.Exists(id) == false) return NotFound();
 
         var user = _userService.Edit(model);
-        if (user.Valid() == false) return BadRequest("Notification.GetErrors()");
+        
+        return (user.Valid() == false)
+            ? BadRequest("Notification.GetErrors()")
+            : Ok(user);
+    }
 
-        return Ok(user);
+    [HttpDelete("{id}")]
+    public IActionResult Delete(Guid id)
+    {
+        if (_userService.Exists(id) == false) return NotFound();
+
+        _userService.Delete(id);
+        return Accepted();
     }
 }

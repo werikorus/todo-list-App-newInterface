@@ -2,6 +2,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Abstraction;
 using TodoList.Repositories.Abstractions;
+using TodoList.Services.Interfaces;
 using TodoList.Services.Models;
 
 namespace TodoList.Services.Abstractions;

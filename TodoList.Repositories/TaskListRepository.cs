@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Entities.TasksList;
 using TodoList.Repositories.Abstractions;
 using TodoList.Repositories.Contexts;
+using TodoList.Repositories.Interfaces;
 
 namespace TodoList.Repositories;
 

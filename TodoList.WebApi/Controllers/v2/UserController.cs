@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using TodoList.Domain.Entities.Users;
-using TodoList.Services;
 using TodoList.Services.Models;
-using TodoList.Domain.Abstraction.Notifications;
+using TodoList.Services.Interfaces;
 
 namespace TodoList.WebApi.Controllers.v2;
+[ApiVersion("2")]
 
 public class UserController : TodoListControllerBase
 {
@@ -15,13 +15,18 @@ public class UserController : TodoListControllerBase
         _userService = userService;
     }
     
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteAsync(Guid id, CancellationToken cancellationToken)
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
     {
-        if (!await _userService.ExistsAsync(id, cancellationToken) == false) return NotFound();
+        if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+
+        var user = await _userService.GetByIdAsync(id, cancellationToken);
         
-        await _userService.DeleteAsync(id, cancellationToken);
-        return Accepted("Deletion Sucessfully!");
+        if (user is null) return NotFound("User not found!");
+
+        if (!user.Valid()) return BadRequest("Notification.GetErrors()");
+
+        return Ok(user);
     }
     
     [HttpGet]
@@ -33,20 +38,6 @@ public class UserController : TodoListControllerBase
         return Ok(users);
     }
     
-    [HttpGet]
-    public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
-    {
-        if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
-
-        var user = await _userService.GetByIdAsync(id, cancellationToken);
-        
-        if (user is null) return NotFound("User not found!");
-
-        if (user.Valid() == false) return BadRequest("Notification.GetErrors()");
-
-        return Ok(user);
-    }
-    
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] UserModel model, CancellationToken cancellationToken)
     {
@@ -56,10 +47,9 @@ public class UserController : TodoListControllerBase
         var user = await _userService.SaveAsync(model, cancellationToken);
         if (user.Valid() == false) return BadRequest("Notification.GetErrors()");
 
-        /*return CreatedAtAction(nameof(GetByIdAsync),
-            new { id = user.Id, cancellationToken, version = HttpContext.GetRequestedApiVersion()?.ToString()}, user);*/
-        
-        return Ok(user);
+        var userResult = await GetByIdAsync(user.Id, cancellationToken);
+
+        return Ok(userResult);
     }
     
     [HttpPut("{id}")]
@@ -70,8 +60,17 @@ public class UserController : TodoListControllerBase
         if (await _userService.ExistsAsync(id, cancellationToken) == false) return NotFound();
 
         var user = await _userService.EditAsync(model, cancellationToken);
-        if (user.Valid() == false) return BadRequest("Notification.GetErrors()");
+        if (!user.Valid()) return BadRequest("Notification.GetErrors()");
 
         return Ok(user);
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteAsync(Guid id, CancellationToken cancellationToken)
+    {
+        if (!await _userService.ExistsAsync(id, cancellationToken)) return NotFound();
+        
+        await _userService.DeleteAsync(id, cancellationToken);
+        return Accepted("Deletion Sucessfully!");
     }
 }
