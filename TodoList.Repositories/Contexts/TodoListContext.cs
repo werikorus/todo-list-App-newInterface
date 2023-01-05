@@ -19,7 +19,7 @@ public class TodoListContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(TodoListContext).Assembly);
-        //modelBuilder.Seed();
+        modelBuilder.Seed();
         base.OnModelCreating(modelBuilder);
     }
 }

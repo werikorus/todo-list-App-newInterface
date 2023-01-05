@@ -31,4 +31,9 @@
       <ProjectReference Include="..\TodoList.Services\TodoList.Services.csproj" />
     </ItemGroup>
 
+   
+    <ItemGroup>
+      <Compile Remove="Controllers\WeatherForecastController.cs" />
+    </ItemGroup>
+
 </Project>
