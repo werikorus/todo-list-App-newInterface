@@ -35,8 +35,8 @@ public class Startup
         services.AddRepository();
 
         services.AddAutoMapper();
-        services.AddService();
-
+        services.RegisterServices();
+        
         services.AddEndpointsApiExplorer();
         
         services.AddSwaggerGen(c =>

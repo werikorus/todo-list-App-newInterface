@@ -60,7 +60,7 @@ public class UserController : TodoListControllerBase
 
         var user = _userService.Edit(model);
         
-        return (user.Valid() == false)
+        return (!user.Valid())
             ? BadRequest("Notification.GetErrors()")
             : Ok(user);
     }

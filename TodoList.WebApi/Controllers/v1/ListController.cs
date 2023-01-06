@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TodoList.Domain.Abstraction.Notifications;
+using TodoList.Domain.Entities.Lists;
+using TodoList.Domain.Entities.Users;
 using TodoList.Services.Interfaces;
 using TodoList.Services.Models;
 
@@ -9,11 +11,7 @@ namespace TodoList.WebApi.Controllers.v1;
 public class ListController : TodoListControllerBase
 {
     private readonly IListService _listService;
-
-    public ListController(IListService listService)
-    {
-        _listService = listService;
-    }
+    public ListController(IListService listService) => _listService = listService;
 
     [HttpGet("{id}")]
     public IActionResult GetById(Guid id)

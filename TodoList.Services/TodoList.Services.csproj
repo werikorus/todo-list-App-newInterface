@@ -27,4 +27,11 @@
       <None Remove="Models\ListsModel" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Services\BaseService.cs" />
+      <Compile Remove="Interfaces\IBaseService.cs" />
+      <Compile Remove="Services\ListTeste.cs" />
+      <Compile Remove="Services\TesteList.cs" />
+    </ItemGroup>
+
 </Project>

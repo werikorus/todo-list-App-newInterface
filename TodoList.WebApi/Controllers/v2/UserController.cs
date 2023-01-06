@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TodoList.Domain.Entities.Users;
+using TodoList.Services.Abstractions;
 using TodoList.Services.Models;
 using TodoList.Services.Interfaces;
 
@@ -23,7 +24,6 @@ public class UserController : TodoListControllerBase
         var user = await _userService.GetByIdAsync(id, cancellationToken);
         
         if (user is null) return NotFound("User not found!");
-
         if (!user.Valid()) return BadRequest("Notification.GetErrors()");
 
         return Ok(user);

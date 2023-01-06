@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using TodoList.Domain.Entities.Lists;
 using TodoList.Domain.Entities.Users;
+using TodoList.Services.Abstractions;
 using TodoList.Services.Models;
 using TodoList.Services.Interfaces;
 
@@ -33,7 +35,7 @@ public class ListController : TodoListControllerBase
         var lists = await _listService.GetAllAsync(cancellationToken);
 
         return (lists.Count == 0)
-            ? NotFound()
+            ? NotFound("Users not found!")
             : Ok(lists);
     }
 

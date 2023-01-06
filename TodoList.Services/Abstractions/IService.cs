@@ -1,7 +1,7 @@
 using TodoList.Domain.Abstraction;
 using TodoList.Services.Models;
 
-namespace TodoList.Services.Interfaces;
+namespace TodoList.Services.Abstractions;
 
 public interface IService<TEntity, in TModel, in TId>
     where TEntity: Entity<TId>

@@ -1,19 +1,17 @@
 using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Abstraction;
 using TodoList.Repositories.Abstractions;
-using TodoList.Services.Interfaces;
+using TodoList.Services.Abstractions;
 using TodoList.Services.Models;
 
-namespace TodoList.Services.Abstractions;
+namespace TodoList.Services.Services;
 
-public abstract  class Service<TEntity, TModel, TId>: IService<TEntity, TModel, TId>
+public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, TId>
     where TEntity : Entity<TId>
     where TModel : BaseModel
     where TId : struct
 {
     private readonly IMapper _mapper;
-
     private readonly IRepository<TEntity, TId> _repository;
 
     protected Service(IRepository<TEntity, TId> repository, IMapper mapper)
@@ -24,20 +22,20 @@ public abstract  class Service<TEntity, TModel, TId>: IService<TEntity, TModel, 
 
     public void Delete(TId id)
     {
-        if(Equals(id, Guid.Empty))return;
+        if (Equals(id, Guid.Empty)) return;
         _repository.Delete(id);
     }
 
     public async Task DeleteAsync(TId id, CancellationToken cancellationToken)
     {
-        if(Equals(id, Guid.Empty))return;
+        if (Equals(id, Guid.Empty)) return;
         await _repository.DeleteAsync(id, cancellationToken);
     }
 
     public TEntity Edit(TModel model)
     {
         var entity = _mapper.Map<TEntity>(model);
-        if(entity.Valid())_repository.Update(entity);
+        if (entity.Valid()) _repository.Update(entity);
         return entity;
     }
 
@@ -56,7 +54,7 @@ public abstract  class Service<TEntity, TModel, TId>: IService<TEntity, TModel, 
     public IList<TEntity> GetAll() => _repository.SelectAll().ToList();
 
     public async Task<IList<TEntity>> GetAllAsync(CancellationToken cancellationToken)
-        => await _repository.SelectAll().ToListAsync();
+        => await _repository.SelectAllAsync(cancellationToken);
 
     public TEntity GetById(TId id) => _repository.SelectById(id);
 
@@ -66,7 +64,7 @@ public abstract  class Service<TEntity, TModel, TId>: IService<TEntity, TModel, 
     public TEntity Save(TModel model)
     {
         var entity = _mapper.Map<TEntity>(model);
-        if(entity.Valid()) _repository.Insert(entity);
+        if (entity.Valid()) _repository.Insert(entity);
         return entity;
     }
 
