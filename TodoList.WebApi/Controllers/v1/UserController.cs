@@ -45,7 +45,8 @@ public class UserController : TodoListControllerBase
             return Conflict();
 
         var user = _userService.Save(model);
-        if (user.Valid() == false) return BadRequest("Notification.GetErrors()");
+        if (user.Valid() == false) 
+            return BadRequest("Notification.GetErrors()");
 
         return CreatedAtAction(nameof(GetById),
             new { Id = user.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, user);
@@ -56,6 +57,7 @@ public class UserController : TodoListControllerBase
     {
         if (Guid.Empty == id) return BadRequest("Invalid Identifier");
         if (model?.Id == id) return UnprocessableEntity("Identifier diverges from solicited object!");
+        
         if (_userService.Exists(id) == false) return NotFound();
 
         var user = _userService.Edit(model);
