@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Entities.Lists;
 using TodoList.Repositories.Abstractions;
 using TodoList.Repositories.Contexts;

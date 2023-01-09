@@ -3,7 +3,7 @@ using TodoList.Repositories.Abstractions;
 using TodoList.Repositories.Contexts;
 using TodoList.Repositories.Interfaces;
 
-namespace TodoList.Repositories;
+namespace TodoList.Repositories.Repositories;
 
 public class UserRepository : Repository<User, Guid>, IUserRepository
 {

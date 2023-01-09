@@ -8,7 +8,7 @@ public class TasksListConfig : IEntityTypeConfiguration<TaskList>
 {
     public void Configure(EntityTypeBuilder<TaskList> builder)
     {
-        builder.ToTable(nameof(TasksListConfig));
+        builder.ToTable(nameof(TaskList));
 
         builder.HasKey(c => c.Id);
 

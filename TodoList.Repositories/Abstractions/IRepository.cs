@@ -15,7 +15,9 @@ public interface IRepository<TEntity, in Tid>
     void Insert(TEntity entity);
     Task InserAsync(TEntity entity, CancellationToken cancellationToken);
 
-    IQueryable<TEntity> SelectAll();
+    IList<TEntity> SelectAll();
+
+    Task<IList<TEntity>> SelectAllAsync(CancellationToken cancellationToken);
 
     TEntity SelectById(Tid id);
     Task<TEntity> SelectByIdAsync(Tid id, CancellationToken cancellationToken);

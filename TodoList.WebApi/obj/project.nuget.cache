@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oOyseBRfe0aQ/WmY0/UEPzq16LPHhrgxc/lz0bcjlzqjpvOaLNO1DakzKGSK7FgaERSiu/BUP3zuKoI3ZFXvkA==",
+  "dgSpecHash": "OokoVavqL72gq9EgZBio1bj4+KMDnfCUqx/++Oz9TnrkJWZ2xQ1+gPoRcs7gZkr+IF9M2awT2+oQRhMCVYuWIA==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.WebApi\\TodoList.WebApi.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,7 @@
     "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql\\7.2.2\\graphql.7.2.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql-parser\\8.1.0\\graphql-parser.8.1.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.dataloader\\4.6.1\\graphql.dataloader.4.6.1.nupkg.sha512",
-    "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.microsoftdi\\7.1.1\\graphql.microsoftdi.7.1.1.nupkg.sha512",
+    "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.microsoftdi\\7.2.2\\graphql.microsoftdi.7.2.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.newtonsoftjson\\4.6.1\\graphql.newtonsoftjson.4.6.1.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.server.authorization.aspnetcore\\7.2.0\\graphql.server.authorization.aspnetcore.7.2.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.server.core\\5.2.1\\graphql.server.core.5.2.1.nupkg.sha512",

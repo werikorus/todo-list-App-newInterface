@@ -160,10 +160,10 @@
           }
         }
       },
-      "GraphQL.MicrosoftDI/7.1.1": {
+      "GraphQL.MicrosoftDI/7.2.2": {
         "type": "package",
         "dependencies": {
-          "GraphQL": "[7.1.1, 8.0.0)",
+          "GraphQL": "[7.2.2, 8.0.0)",
           "Microsoft.Extensions.Options": "2.0.0"
         },
         "compile": {
@@ -1996,6 +1996,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "FluentValidation.AspNetCore": "11.2.2",
           "FluentValidation.DependencyInjectionExtensions": "11.4.0",
+          "GraphQL.MicrosoftDI": "7.2.2",
           "System.ServiceModel.Primitives": "4.10.0",
           "TodoList.Domain": "1.0.0",
           "TodoList.Repositories": "1.0.0"
@@ -2213,15 +2214,15 @@
         "logo.64x64.png"
       ]
     },
-    "GraphQL.MicrosoftDI/7.1.1": {
-      "sha512": "VnEG6E6x6s8v4qm1OT3wlGG3IdmnvRHafr4fxXZqx5OrECRVNDRo/KpVfruLP6Q0Bd6ReuVhPlKCHaL0V1eANg==",
+    "GraphQL.MicrosoftDI/7.2.2": {
+      "sha512": "EolZztFU3BMjVki8Px18uhozyDOrHCyyasVo+OnxK03lhJeCDY0/G+U0YLO71E/UUDXybdiUY0jORswtP3sTXg==",
       "type": "package",
-      "path": "graphql.microsoftdi/7.1.1",
+      "path": "graphql.microsoftdi/7.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "graphql.microsoftdi.7.1.1.nupkg.sha512",
+        "graphql.microsoftdi.7.2.2.nupkg.sha512",
         "graphql.microsoftdi.nuspec",
         "lib/netstandard2.0/GraphQL.MicrosoftDI.dll",
         "lib/netstandard2.0/GraphQL.MicrosoftDI.xml",
@@ -5094,7 +5095,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   },

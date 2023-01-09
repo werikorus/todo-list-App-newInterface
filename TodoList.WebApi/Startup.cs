@@ -11,6 +11,7 @@ using TodoList.Repositories.Contexts;
 using Microsoft.Extensions.Configuration;
 using TodoList.Services.Mappers;
 using AutoMapper;
+using GraphQL.Types;
 using TodoList.Repositories.Ioc;
 using TodoList.Services.Ioc;
 namespace TodoList.WebApi;
@@ -36,7 +37,7 @@ public class Startup
 
         services.AddAutoMapper();
         services.RegisterServices();
-        
+
         services.AddEndpointsApiExplorer();
         
         services.AddSwaggerGen(c =>
@@ -57,6 +58,8 @@ public class Startup
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "To Do List Api v1"));
+            
+            app.UseGraphQLAltair();
         }
 
         app.UseRouting();
@@ -68,7 +71,10 @@ public class Startup
             .AllowCredentials());
 
         app.UseEndpoints(endpoints => endpoints.MapControllers());
-        
+
+
+        app.UseGraphQL<ISchema>();
+
     }
 
     protected void ConfigureAutoMapper(IServiceProvider services, IMapperConfigurationExpression configuration)
