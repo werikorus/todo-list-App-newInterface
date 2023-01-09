@@ -310,21 +310,17 @@
               "target": "Package",
               "version": "[7.2.2, )"
             },
-            "GraphQL.Server.Authorization.AspNetCore": {
+            "GraphQL-Parser": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "GraphQL.Server.Transports.AspNetCore": {
               "target": "Package",
               "version": "[7.2.0, )"
-            },
-            "GraphQL.Server.Transports.AspNetCore.SystemTextJson": {
-              "target": "Package",
-              "version": "[5.2.1, )"
             },
             "GraphQL.Server.Ui.Altair": {
               "target": "Package",
               "version": "[7.2.0, )"
-            },
-            "GraphQL.SystemTextJson": {
-              "target": "Package",
-              "version": "[7.2.2, )"
             },
             "Microsoft.AspNet.WebApi.Versioning": {
               "target": "Package",

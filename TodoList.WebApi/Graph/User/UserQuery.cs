@@ -5,7 +5,7 @@ using TodoList.WebApi.Graph.User.Types;
 
 namespace TodoList.WebApi.Graph.User;
 
-public class UserQuery : ObjectGraphType
+public abstract class UserQuery : ObjectGraphType
 {
     public UserQuery()
     {
@@ -32,13 +32,8 @@ public class UserQuery : ObjectGraphType
             resolve: context =>
             {
                 var id = context.GetArgument<Guid>("Id");
-                if (context.RequestServices != null)
-                {
-                    var service = context.RequestServices.GetRequiredService<IUserService>();
-                    return service.GetByIdAsync(id, CancellationToken.None);
-                }
-
-                return null;
+                var service = context.RequestServices.GetRequiredService<IUserService>();
+                return service.GetByIdAsync(id, CancellationToken.None);
             });
     }
 }

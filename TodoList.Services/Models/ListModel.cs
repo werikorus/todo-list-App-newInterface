@@ -10,5 +10,5 @@ public class ListModel : BaseModel
 
     public DateTime DateUpdate { get; set; }
    
-    public virtual ICollection<TaskList> TasksList { get; }
+    public virtual IList<TaskListModel> TasksList { get; }
 }

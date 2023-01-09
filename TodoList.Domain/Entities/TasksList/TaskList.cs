@@ -14,17 +14,17 @@ public class TaskList : Entity<Guid>
         SetDateCreate(dateCreate);
         setDateUpdate(dateUpdate);
     }
-    
-    public TaskList() { }
-    
+
+    public TaskList()
+    {
+    }
+
     public Guid IdList { get; set; }
     public string DescriptionTask { get; set; }
-    
     public bool Done { get; set; }
     public DateTime DateCreate { get; set; }
-    
     public DateTime DateUpdate { get; set; }
-    
+
     protected sealed override void SetId(Guid id)
     {
         if (id.Equals(Guid.Empty))
@@ -35,7 +35,7 @@ public class TaskList : Entity<Guid>
 
         Id = id;
     }
-    
+
     private void SetdescriptionTask(string descriptionTask)
     {
         if (descriptionTask.Equals(Guid.Empty))
@@ -46,7 +46,7 @@ public class TaskList : Entity<Guid>
 
         DescriptionTask = descriptionTask;
     }
-    
+
     private void SetDone(bool done)
     {
         if (done.Equals(Guid.Empty))
@@ -57,10 +57,10 @@ public class TaskList : Entity<Guid>
 
         Done = done;
     }
-    
+
     private void SetIdList(Guid idList)
     {
-        if(idList.Equals(Guid.Empty))
+        if (idList.Equals(Guid.Empty))
         {
             Notification.AddError("DomainResource.TodoList_idList_invalid");
             return;
@@ -68,10 +68,10 @@ public class TaskList : Entity<Guid>
 
         IdList = idList;
     }
-    
+
     private void setDateUpdate(DateTime dateUpdate)
     {
-        if(dateUpdate.Equals(Guid.Empty))
+        if (dateUpdate.Equals(Guid.Empty))
         {
             Notification.AddError("DomainResource.TodoList_dateUpdate_invalid");
             return;
@@ -82,7 +82,7 @@ public class TaskList : Entity<Guid>
 
     private void SetDateCreate(DateTime dateCreate)
     {
-        if(dateCreate.Equals(Guid.Empty))
+        if (dateCreate.Equals(Guid.Empty))
         {
             Notification.AddError("DomainResource.TodoList_dateCreate_invalid");
             return;

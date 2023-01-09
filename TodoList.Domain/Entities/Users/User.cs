@@ -6,15 +6,12 @@ namespace TodoList.Domain.Entities.Users;
 public class User : Entity<Guid>
 {
     public string Name { get; set; }
-     
-     public string Password { get; set; }
-     
-     public string Email { get; set; }
-    
-     public DateTime DateCreate { get; set; }
-     
-     public DateTime DateUpdate { get; set; }
-     
+
+    public string Password { get; set; }
+    public string Email { get; set; }
+    public DateTime DateCreate { get; set; }
+    public DateTime DateUpdate { get; set; }
+
     internal User(Guid id, string name, string password, string email, DateTime dateCreate, DateTime dateUpdate)
     {
         SetId(id);
@@ -24,9 +21,11 @@ public class User : Entity<Guid>
         SetDateCreate(dateCreate);
         SetDateUpdate(dateUpdate);
     }
-    
-    protected User(){}
-    
+
+    protected User()
+    {
+    }
+
     protected override void SetId(Guid id)
     {
         if (id.Equals(Guid.Empty))
@@ -37,6 +36,7 @@ public class User : Entity<Guid>
 
         Id = id;
     }
+
     private void SetName(string name)
     {
         if (name.Equals(Guid.Empty))
@@ -44,10 +44,10 @@ public class User : Entity<Guid>
             Notification.AddError(DomainResource.TodoList_Name_invalid);
             return;
         }
-        
+
         Name = name;
-    } 
-    
+    }
+
     private void SetPassword(string password)
     {
         if (string.IsNullOrEmpty(password))
@@ -55,10 +55,10 @@ public class User : Entity<Guid>
             Notification.AddError(DomainResource.TodoList_Password_invalid);
             return;
         }
-        
+
         Password = password;
     }
-    
+
     private void SetEmail(string email)
     {
         if (string.IsNullOrEmpty(email))
@@ -66,10 +66,10 @@ public class User : Entity<Guid>
             Notification.AddError(DomainResource.TodoList_Email_invalid);
             return;
         }
-        
+
         Email = email;
     }
-    
+
     private void SetDateCreate(DateTime dateCreate)
     {
         if (string.IsNullOrEmpty(dateCreate.ToString(CultureInfo.InvariantCulture)))
@@ -80,7 +80,7 @@ public class User : Entity<Guid>
 
         DateCreate = dateCreate;
     }
-    
+
     private void SetDateUpdate(DateTime dateUpdate)
     {
         if (string.IsNullOrEmpty(dateUpdate.ToString(CultureInfo.InvariantCulture)))
