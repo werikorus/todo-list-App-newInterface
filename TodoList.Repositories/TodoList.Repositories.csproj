@@ -33,6 +33,7 @@
 
     <ItemGroup>
       <Compile Remove="Maps\**" />
+      <Compile Remove="Migrations\TodoListContextModelSnapshot.cs" />
     </ItemGroup>
 
     <ItemGroup>
