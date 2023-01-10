@@ -6,23 +6,25 @@ namespace TodoList.Domain.Entities.Lists;
 
 public class List : Entity<Guid>
 {
-    internal List(Guid id, string descriptionList, DateTime dateCreate, DateTime dateUpdate)
+    internal List(Guid id, Guid idUser, string descriptionList, DateTime dateCreate, DateTime dateUpdate)
     {
         SetId(id);
+        SetUserId(idUser);
         SetDescriptionList(descriptionList);
         SetDateCreate(dateCreate);
         SetDateUpdate(dateUpdate);
-        TasksList = new List<TaskList>();
     }
+
 
     protected List()
     {
     }
 
     public string DescriptionList { get; set; }
+    
+    public Guid IdUser { get; set; }
     public DateTime DateCreate { get; set; }
     public DateTime DateUpdate { get; set; }
-    public virtual ICollection<TaskList> TasksList { get; }
 
     protected sealed override void SetId(Guid id)
     {
@@ -33,6 +35,17 @@ public class List : Entity<Guid>
         }
 
         Id = id;
+    }
+    
+    private void SetUserId(Guid idUser)
+    {
+        if (idUser.Equals(Guid.Empty))
+        {
+            Notification.AddError(DomainResource.TodoList_Identifier_invalid);
+            return;
+        }
+
+        IdUser = idUser;
     }
 
     private void SetDescriptionList(string descriptionList)
@@ -66,18 +79,5 @@ public class List : Entity<Guid>
         }
 
         DateUpdate = dateUpdate;
-    }
-
-    public void AddTasksList(TaskList tasksList)
-    {
-        if (tasksList is null) return;
-
-        if (tasksList.Valid() == false)
-        {
-            Notification.AddError(DomainResource.MeuEstudo_Thing_invalid, tasksList.Notification);
-            return;
-        }
-
-        TasksList.Add(tasksList);
     }
 }

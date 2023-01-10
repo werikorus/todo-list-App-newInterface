@@ -19,7 +19,6 @@ public class TaskListController : TodoListControllerBase
     public IActionResult GetById(Guid id)
     {
         if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
-
         var task = _taskListService.GetById(id);
         
         return (task is null) 
@@ -44,7 +43,7 @@ public class TaskListController : TodoListControllerBase
             return Conflict();
 
         var task = _taskListService.Save(model);
-        if (!task.Valid()) return BadRequest("Notification.GetErrors()");
+        if (!task.Valid()) return BadRequest(task.Notification.GetErrors);
 
         return CreatedAtAction(nameof(GetById),
             new { Id = task.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, task);
@@ -58,7 +57,7 @@ public class TaskListController : TodoListControllerBase
         if (!_taskListService.Exists(id)) return NotFound();
 
         var task = _taskListService.Edit(model);
-        if (!task.Valid()) return BadRequest("Notification.GetErrors()");
+        if (!task.Valid()) return BadRequest(task.Notification.GetErrors);
 
         return Ok(task);
     }

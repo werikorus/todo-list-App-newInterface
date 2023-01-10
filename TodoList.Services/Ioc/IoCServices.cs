@@ -16,8 +16,11 @@ public static class IoCServices
         services.AddScoped<IListService, ListsService>();
         services.AddScoped<ITasksListService, TasksListService>();
     }
-    
 
-    public static IMvcCoreBuilder AddFluentValidation(this IMvcCoreBuilder builder)
-        => builder.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserModelValidator>());
+    public static void AddFluentValidation(this IMvcCoreBuilder builder)
+    {
+        builder.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserModelValidator>());
+        builder.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ListModelValidator>());
+        builder.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<TaskListModelValidator>());
+    }
 }

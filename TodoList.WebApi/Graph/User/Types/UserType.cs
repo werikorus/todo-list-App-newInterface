@@ -1,8 +1,6 @@
 using GraphQL.Types;
 
-
 namespace TodoList.WebApi.Graph.User.Types;
-
 public class UserType : ObjectGraphType<Domain.Entities.Users.User>
 {
     public UserType()

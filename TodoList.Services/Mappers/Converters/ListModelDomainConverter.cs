@@ -14,10 +14,8 @@ public class ListModelDomainConverter : ITypeConverter<ListModel, List>
             .WithDescriptionList(source.DescriptionList)
             .WithDateCreate(source.DateCreate)
             .WithDateUpdate(source.DateUpdate)
+            .WitIdUser(source.IdUser)
             .Build();
-
-        foreach (var sourceList in source.TasksList ?? new List<TaskListModel>())
-            list.AddTasksList(context.Mapper.Map<TaskListModel, TaskList>(sourceList));
 
         return list;
     }

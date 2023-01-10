@@ -12,6 +12,10 @@ public class ListModelValidator : AbstractValidator<ListModel>
         
         RuleFor(x => x.Id)
             .NotEqual(Guid.Empty).WithMessage("Invalid Identifier!");
+        
+        RuleFor(x => x.IdUser)
+            .NotEqual(Guid.Empty).WithMessage("IdUser not informed!")
+            .NotEmpty().WithMessage("IdUser must not be EMPTY!");
 
         RuleFor(x => x.DescriptionList)
             .NotNull().WithMessage("DescriptionList must not be NULL!")

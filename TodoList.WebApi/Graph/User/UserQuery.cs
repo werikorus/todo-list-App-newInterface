@@ -13,13 +13,8 @@ public abstract class UserQuery : ObjectGraphType
             "Users",
             resolve: context =>
             {
-                if (context.RequestServices != null)
-                {
-                    var service = context.RequestServices.GetRequiredService<IUserService>();
-                    return service.GetAllAsync(CancellationToken.None);
-                }
-
-                return null;
+                var service = context.RequestServices.GetRequiredService<IUserService>();
+                return service.GetAllAsync(CancellationToken.None);
             });
 
         Field<UserType>(

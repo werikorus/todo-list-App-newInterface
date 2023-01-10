@@ -1,35 +1,28 @@
-using System;
-using System.Net;
-using System.Net.Http;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
-using TodoList.Repositories.Contexts;
-using Microsoft.Extensions.Configuration;
 using TodoList.Services.Mappers;
 using AutoMapper;
-using GraphQL.MicrosoftDI;
+using GraphQL.Server;
+using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
+using Microsoft.OpenApi.Models;
 using TodoList.Repositories.Ioc;
 using TodoList.Services.Ioc;
 using TodoList.WebApi.Graph.User;
 using TodoList.WebApi.Ioc;
-
 namespace TodoList.WebApi;
 
 public class Startup
 {
     protected readonly IHostEnvironment HostEnvironment;
-    public IConfiguration Configuration  { get; }
     public Startup(IConfiguration configuration) => Configuration = configuration;
+    public IConfiguration Configuration { get; }
 
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddCors();
-        services.AddControllers();
+        services.AddControllers()
+            .AddNewtonsoftJson(options
+                => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
         services.AddApiVersioning();
 
         services.AddMvcCore(options => options.SuppressAsyncSuffixInActionNames = false)
@@ -38,14 +31,14 @@ public class Startup
         services.AddDbContext(Configuration);
         services.AddRepository();
 
-         services.AddAutoMapper();
-        
+        services.AddAutoMapper();
+
         services.RegisterServices();
-        
+
         services.ConfigureGraphQlServices(Configuration, HostEnvironment);
-        
+
         services.AddEndpointsApiExplorer();
-        
+
         services.AddSwaggerGen(c =>
         {
             c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
@@ -57,17 +50,18 @@ public class Startup
         });
     }
 
-    public void Configure(IApplicationBuilder app,  IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "To Do List Api v1"));
-            app.UseGraphQLAltair();
         }
 
         app.UseRouting();
+
+        app.UseGraphQLPlayground();
 
         app.UseCors(x => x
             .AllowAnyMethod()
@@ -75,15 +69,15 @@ public class Startup
             .SetIsOriginAllowed(origin => true)
             .AllowCredentials());
 
+        app.UseGraphQL<UserSchema>();
+        app.UseGraphQLPlayground(options: new GraphQLPlaygroundOptions());
         app.UseEndpoints(endpoints => endpoints.MapControllers());
     }
-
     protected void ConfigureAutoMapper(IServiceProvider services, IMapperConfigurationExpression configuration)
     {
-        configuration.AddMaps(new []
+        configuration.AddMaps(new[]
         {
-           typeof(ModelToDomainProfile).Assembly
+            typeof(ModelToDomainProfile).Assembly
         });
     }
-    
 }

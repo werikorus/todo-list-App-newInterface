@@ -15,6 +15,7 @@ public class TaskListModelDomainConverter : ITypeConverter<TaskListModel, TaskLi
                 .WithDescriptionTask(source.DescriptionTask)
                 .WithDateCreate(source.DateCreate)
                 .WithDateUpdate(source.DateUpdate)
+                .WithIdUser(source.IdUser)
                 .WithDone(source.Done)
                 .Build();
 }

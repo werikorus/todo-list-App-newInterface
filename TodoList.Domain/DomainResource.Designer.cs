@@ -37,6 +37,10 @@ namespace TodoList.Domain {
         public static string TodoList_dateCreate_invalid;
         public static string TodoList_Identifier_invalid;
         public static string TodoList_descriptionList_invalid;
+        public static string TodoList_idList_invalid;
+        public static string TodoList_done_invalid;
+        public static string TodoList_descriptionTask_invalid;
+        public static string TodoList_idUser_invalid;
 
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal DomainResource() {

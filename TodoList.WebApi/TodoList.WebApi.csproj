@@ -8,13 +8,16 @@
 
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="12.0.0" />
-        <PackageReference Include="GraphQL" Version="7.2.2" />
-        <PackageReference Include="GraphQL-Parser" Version="8.1.0" />
-        <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="7.2.0" />
-        <PackageReference Include="GraphQL.Server.Ui.Altair" Version="7.2.0" />
+        <PackageReference Include="GraphQL" Version="3.3.2" />
+        <PackageReference Include="GraphQL-Parser" Version="5.3.3" />
+        <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.5.0-alpha0046" />
+        <PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="3.5.0-alpha0046" />
+        <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.5.0-alpha0073" />
+        <PackageReference Include="GraphQL.SystemTextJson" Version="3.0.0-preview-1490" />
         <PackageReference Include="Microsoft.AspNet.WebApi.Versioning" Version="4.1.1" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
@@ -25,7 +28,8 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
     </ItemGroup>
@@ -37,8 +41,8 @@
 
    
     <ItemGroup>
-      <Compile Remove="Controllers\WeatherForecastController.cs" />
       <Compile Remove="Graph\User\UserSchemaExtension.cs" />
+      <Compile Remove="Controllers\WeatherForecastController.cs" />
     </ItemGroup>
 
    

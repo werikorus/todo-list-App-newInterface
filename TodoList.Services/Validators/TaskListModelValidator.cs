@@ -12,6 +12,9 @@ public class TaskListModelValidator : AbstractValidator<TaskListModel>
         
         RuleFor(x => x.Id)
             .NotEqual(Guid.Empty).WithMessage("Invalid Identifier!");
+        
+        RuleFor(x => x.IdUser)
+            .NotEqual(Guid.Empty).WithMessage("IdUset not informed!");
 
         RuleFor(x => x.IdList)
             .NotNull().WithMessage("IdList must not be NULL!")

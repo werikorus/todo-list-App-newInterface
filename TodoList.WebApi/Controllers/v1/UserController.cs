@@ -46,7 +46,7 @@ public class UserController : TodoListControllerBase
 
         var user = _userService.Save(model);
         if (user.Valid() == false) 
-            return BadRequest("Notification.GetErrors()");
+            return BadRequest(user.Notification.GetErrors);
 
         return CreatedAtAction(nameof(GetById),
             new { Id = user.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, user);
@@ -63,7 +63,7 @@ public class UserController : TodoListControllerBase
         var user = _userService.Edit(model);
         
         return (!user.Valid())
-            ? BadRequest("Notification.GetErrors()")
+            ? BadRequest(user.Notification.GetErrors)
             : Ok(user);
     }
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/FRY91aVMETB2S7pq98kIT18llzoMpPDanJheaPbtOqQWoOM+engXl8tsbC6hpXW9zfYC5mCGErSmDvX/GxOkg==",
+  "dgSpecHash": "CtH8Xi0iAEv78pLChOjPECaZELFx4ESHqvovAVSYjoo9J48F9OP6YSEVf3UXS/b6gdP0gdnEg6E2Pbm9SsrMnA==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
   "expectedPackageFiles": [
@@ -11,9 +11,6 @@
     "C:\\Users\\werik.cunha\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
-    "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql\\7.2.2\\graphql.7.2.2.nupkg.sha512",
-    "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql-parser\\8.1.0\\graphql-parser.8.1.0.nupkg.sha512",
-    "C:\\Users\\werik.cunha\\.nuget\\packages\\graphql.microsoftdi\\7.2.2\\graphql.microsoftdi.7.2.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -46,7 +43,6 @@
     "C:\\Users\\werik.cunha\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
-    "C:\\Users\\werik.cunha\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",

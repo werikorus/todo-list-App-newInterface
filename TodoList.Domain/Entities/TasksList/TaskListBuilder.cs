@@ -5,16 +5,13 @@ namespace TodoList.Domain.Entities.TasksList;
 
 public class TaskListBuilder : Builder<TaskListBuilder, TaskList, Guid>, ITasksListBuilder 
 {
+    private ITasksListBuilder _tasksListBuilderImplementation;
     public Guid _idList { get; set; }
-    
+    public Guid _idUser { get; set; }
     public string _descriptionTask { get; set; }
-
-    public bool _done { get; set; } 
-    
+    public bool _done { get; set; }
     public DateTime _dateCreate { get; set; }
-   
     public DateTime _dateUpdate { get; set; }
-
     public ITasksListBuilder WithIdList(Guid idList)
     {
         _idList = idList;
@@ -45,5 +42,12 @@ public class TaskListBuilder : Builder<TaskListBuilder, TaskList, Guid>, ITasksL
         return this;
     }
 
-    public override TaskList Build() => new TaskList(_idList, Id, _descriptionTask, _done, _dateCreate, _dateUpdate);
+    public ITasksListBuilder WithIdUser(Guid idUser)
+    {
+        _idUser = idUser;
+        return this;
+    }
+    
+
+    public override TaskList Build() => new TaskList(Id, _idList,_idUser, _descriptionTask, _done, _dateCreate, _dateUpdate);
 }
