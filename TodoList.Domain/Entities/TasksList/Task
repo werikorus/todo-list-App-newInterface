@@ -1,0 +1,6 @@
+namespace TodoList.Domain.Entities.Lists;
+
+public class List
+{
+    
+}
