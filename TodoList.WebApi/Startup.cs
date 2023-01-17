@@ -61,7 +61,7 @@ public class Startup
 
         app.UseRouting();
 
-        app.UseGraphQLPlayground();
+        app.UseGraphQLPlayground(); 
 
         app.UseCors(x => x
             .AllowAnyMethod()
