@@ -61,13 +61,14 @@ public class Startup
 
         app.UseRouting();
 
-        app.UseGraphQLPlayground(); 
+        app.UseGraphQLPlayground();
 
         app.UseCors(x => x
+            .AllowAnyOrigin()
             .AllowAnyMethod()
             .AllowAnyHeader()
-            .SetIsOriginAllowed(origin => true)
-            .AllowCredentials());
+            .SetIsOriginAllowed(origin => true));
+
 
         app.UseGraphQL<UserSchema>();
         app.UseGraphQLPlayground(options: new GraphQLPlaygroundOptions());

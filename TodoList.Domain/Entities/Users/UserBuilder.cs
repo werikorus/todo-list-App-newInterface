@@ -46,5 +46,5 @@ public class UserBuilder: Builder<UserBuilder, User, Guid>, IUserBuilder
         return this;
     }
 
-    public override User Build() => new User(Id, _name, _email, _password, _dateCreate, _dateUpdate);
+    public override User Build() => new User(Id, _name, _password, _email, _dateCreate, _dateUpdate);
 }

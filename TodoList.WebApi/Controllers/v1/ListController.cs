@@ -15,7 +15,7 @@ public class ListController : TodoListControllerBase
         _listService = listService;
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("UserId/{id}")]
     public IActionResult GetById(Guid id)
     {
         if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
