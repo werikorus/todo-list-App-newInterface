@@ -11,6 +11,8 @@ public class UserBuilder: Builder<UserBuilder, User, Guid>, IUserBuilder
     
     private string _email;
     
+    private string _role;
+    
     private DateTime _dateCreate;
     
     private DateTime _dateUpdate;
@@ -34,6 +36,12 @@ public class UserBuilder: Builder<UserBuilder, User, Guid>, IUserBuilder
         return this;
     }
 
+    public IUserBuilder WithRole(string role)
+    {
+        _role = role;
+        return this;
+    }
+
     public IUserBuilder WithDateCreate(DateTime dateCreate)
     {
         _dateCreate = dateCreate;
@@ -46,5 +54,5 @@ public class UserBuilder: Builder<UserBuilder, User, Guid>, IUserBuilder
         return this;
     }
 
-    public override User Build() => new User(Id, _name, _password, _email, _dateCreate, _dateUpdate);
+    public override User Build() => new User(Id, _name, _password, _email, _role, _dateCreate, _dateUpdate);
 }

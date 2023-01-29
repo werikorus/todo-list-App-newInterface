@@ -3,6 +3,7 @@ using TodoList.Domain.Abstraction;
 using TodoList.Repositories.Abstractions;
 using TodoList.Services.Abstractions;
 using TodoList.Services.Models;
+using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Services.Services;
 
@@ -73,5 +74,10 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
         var entity = _mapper.Map<TEntity>(model);
         if (entity.Valid()) await _repository.InserAsync(entity, cancellationToken);
         return entity;
+    }
+
+    public User VerifyUserAndPassword(string dtoUserName, string dtoPassword)
+    {
+        return _repository.VerifyUserAndPassword(dtoUserName, dtoPassword);
     }
 }

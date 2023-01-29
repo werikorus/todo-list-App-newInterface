@@ -1,5 +1,6 @@
 using TodoList.Domain.Abstraction;
 using TodoList.Services.Models;
+using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Services.Abstractions;
 
@@ -31,4 +32,6 @@ public interface IService<TEntity, in TModel, in TId>
     TEntity Save(TModel model);
 
     Task<TEntity> SaveAsync(TModel model, CancellationToken cancellationToken);
+    
+    User VerifyUserAndPassword(string dtoUserName, string dtoPassword);
 }
