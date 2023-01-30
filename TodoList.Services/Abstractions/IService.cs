@@ -33,5 +33,5 @@ public interface IService<TEntity, in TModel, in TId>
 
     Task<TEntity> SaveAsync(TModel model, CancellationToken cancellationToken);
     
-    User VerifyUserAndPassword(string dtoUserName, string dtoPassword);
+    User VerifyUserAndPassword(string dtoEmail, string dtoPassword);
 }

@@ -78,6 +78,6 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
 
     public User VerifyUserAndPassword(string dtoUserName, string dtoPassword)
     {
-        return _repository.VerifyUserAndPassword(dtoUserName, dtoPassword);
+        return _repository.VerifyEmailAndPassword(dtoUserName, dtoPassword);
     }
 }
