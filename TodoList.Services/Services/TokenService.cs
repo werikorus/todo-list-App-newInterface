@@ -7,7 +7,7 @@ using TodoList.Domain.Entities.Users;
 namespace TodoList.Services.Services;
 public class TokenService
 {
-    public static string GenerateToken(User user)
+    public string GenerateToken(User user)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(Settings.Secret);

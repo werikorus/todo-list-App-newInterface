@@ -1,7 +1,9 @@
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using TodoList.Repositories.Abstractions;
 using TodoList.Repositories.Repositories;
+using TodoList.Services.Abstractions;
 using TodoList.Services.Interfaces;
 using TodoList.Services.Mappers;
 using TodoList.Services.Services;
@@ -17,6 +19,7 @@ public static class IoCServices
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IListService, ListsService>();
         services.AddScoped<ITasksListService, TasksListService>();
+        //services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<TokenService>();
     }
 

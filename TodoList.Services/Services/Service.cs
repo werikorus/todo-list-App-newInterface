@@ -75,9 +75,4 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
         if (entity.Valid()) await _repository.InserAsync(entity, cancellationToken);
         return entity;
     }
-
-    public User VerifyUserAndPassword(string dtoUserName, string dtoPassword)
-    {
-        return _repository.VerifyEmailAndPassword(dtoUserName, dtoPassword);
-    }
 }
