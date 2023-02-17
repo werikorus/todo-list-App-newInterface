@@ -7,7 +7,9 @@ using GraphQL.Types;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using TodoList.Repositories.Interfaces;
 using TodoList.Repositories.Ioc;
+using TodoList.Repositories.Repositories;
 using TodoList.Services;
 using TodoList.Services.Ioc;
 using TodoList.WebApi.Graph.User;
@@ -34,16 +36,12 @@ public class Startup
             .AddFluentValidation();
 
         services.AddDbContext(Configuration);
-        
         services.RegisterServices();
         services.AddRepository();
-
         services.AddAutoMapper();
-
         services.ConfigureGraphQlServices(Configuration, HostEnvironment);
-
         services.AddEndpointsApiExplorer();
-
+        
         services.AddSwaggerGen(c =>
         {
             c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());

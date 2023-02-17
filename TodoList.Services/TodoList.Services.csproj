@@ -36,7 +36,6 @@
       <Compile Remove="Services\TesteList.cs" />
       <Compile Remove="Models\User.cs" />
       <Compile Remove="Models\UserAuth.cs" />
-      <Compile Remove="Interfaces\ITokenService.cs" />
     </ItemGroup>
 
 </Project>

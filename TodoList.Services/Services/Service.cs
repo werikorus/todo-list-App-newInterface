@@ -3,7 +3,6 @@ using TodoList.Domain.Abstraction;
 using TodoList.Repositories.Abstractions;
 using TodoList.Services.Abstractions;
 using TodoList.Services.Models;
-using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Services.Services;
 

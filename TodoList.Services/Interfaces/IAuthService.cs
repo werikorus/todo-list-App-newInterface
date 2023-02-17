@@ -1,6 +1,6 @@
 using TodoList.Domain.Entities.Users;
 
-namespace TodoList.Services.Abstractions;
+namespace TodoList.Services.Interfaces;
 
 public interface IAuthService
 {

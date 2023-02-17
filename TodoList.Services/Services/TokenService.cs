@@ -3,9 +3,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TodoList.Domain.Entities.Users;
+using TodoList.Services.Abstractions;
+using TodoList.Services.Interfaces;
 
 namespace TodoList.Services.Services;
-public class TokenService
+public class TokenService : ITokenService
 {
     public string GenerateToken(User user)
     {
