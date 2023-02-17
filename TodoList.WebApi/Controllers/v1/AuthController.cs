@@ -15,11 +15,11 @@ public class AuthController : TodoListControllerBase
     private readonly ITokenService _tokenService;
     private readonly IAuthService _authService;
 
-/*    public AuthController(IAuthService authService, ITokenService tokenService)
+   public AuthController(IAuthService authService, ITokenService tokenService)
     {
         _tokenService = tokenService;
         _authService = authService;
-    }*/
+    }
     
     
     [HttpPost]
