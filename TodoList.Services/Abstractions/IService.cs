@@ -1,5 +1,6 @@
 using TodoList.Domain.Abstraction;
 using TodoList.Services.Models;
+using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Services.Abstractions;
 

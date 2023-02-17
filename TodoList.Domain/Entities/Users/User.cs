@@ -6,18 +6,19 @@ namespace TodoList.Domain.Entities.Users;
 public class User : Entity<Guid>
 {
     public string Name { get; set; }
-
     public string Password { get; set; }
     public string Email { get; set; }
+    public string Role { get; set; }
     public DateTime DateCreate { get; set; }
     public DateTime DateUpdate { get; set; }
 
-    internal User(Guid id, string name, string password, string email, DateTime dateCreate, DateTime dateUpdate)
+    internal User(Guid id, string name, string password, string email, string role, DateTime dateCreate, DateTime dateUpdate)
     {
         SetId(id);
         SetName(name);
         SetPassword(password);
         SetEmail(email);
+        SetRole(role);
         SetDateCreate(dateCreate);
         SetDateUpdate(dateUpdate);
     }
@@ -69,6 +70,18 @@ public class User : Entity<Guid>
 
         Email = email;
     }
+    
+    private void SetRole(string role)
+    {
+        if (string.IsNullOrEmpty(role))
+        {
+            Notification.AddError(DomainResource.TodoList_Role_invalid);
+            return;
+        }
+
+        Role = role;
+    }
+
 
     private void SetDateCreate(DateTime dateCreate)
     {
