@@ -1,4 +1,5 @@
 using TodoList.Domain.Abstraction;
+using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Repositories.Abstractions;
 
@@ -24,4 +25,5 @@ public interface IRepository<TEntity, in Tid>
 
     void Update(TEntity entity);
     Task UpdateAsync(TEntity entity, CancellationToken cancellationToken);
+    
 }
