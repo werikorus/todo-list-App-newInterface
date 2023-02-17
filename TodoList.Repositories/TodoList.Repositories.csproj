@@ -34,6 +34,8 @@
     <ItemGroup>
       <Compile Remove="Maps\**" />
       <Compile Remove="Migrations\TodoListContextModelSnapshot.cs" />
+      <Compile Remove="Abstractions\IAuthRepository.cs" />
+      <Compile Remove="Abstractions\AuthRepository.cs" />
     </ItemGroup>
 
     <ItemGroup>
