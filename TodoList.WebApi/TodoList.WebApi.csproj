@@ -43,6 +43,7 @@
     <ItemGroup>
       <Compile Remove="Graph\User\UserSchemaExtension.cs" />
       <Compile Remove="Controllers\WeatherForecastController.cs" />
+      <Compile Remove="Controllers\v1\AuthController.cs" />
     </ItemGroup>
 
    

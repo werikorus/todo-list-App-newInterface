@@ -19,8 +19,6 @@ public static class IoCServices
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IListService, ListsService>();
         services.AddScoped<ITasksListService, TasksListService>();
-        //services.AddScoped<IAuthService, AuthService>();
-        //services.AddScoped<ITokenService, TokenService>();
     }
 
     public static void AddFluentValidation(this IMvcCoreBuilder builder)
