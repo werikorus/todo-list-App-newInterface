@@ -21,60 +21,95 @@ public class UserController : TodoListControllerBase
     [HttpGet("{id}")]
     public IActionResult GetById(Guid id)
     {
-        if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+        try
+        {
+            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
 
-        var user = _userService.GetById(id);
+            var user = _userService.GetById(id);
 
-        return (user is null)
-            ? NoContent()
-            : Ok(user);
+            return (user is null)
+                ? NoContent()
+                : Ok(user);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
     }
 
     [HttpGet]
     public ActionResult<IEnumerable<User>> GetAll()
     {
-        var users = _userService.GetAll();
+        try
+        {
+            var users = _userService.GetAll();
 
-        return (users.Count == 0)
-            ? NotFound()
-            : Ok(users);
+            return (users.Count == 0)
+                ? NotFound()
+                : Ok(users);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
     }
 
     [HttpPost]
     public IActionResult Post([FromBody] UserModel model)
     {
-        if (model.Id.HasValue && _userService.Exists(model.Id.Value))
-            return Conflict();
+        try
+        {
+            if (model.Id.HasValue && _userService.Exists(model.Id.Value))
+                return Conflict();
 
-        var user = _userService.Save(model);
-        if (user.Valid() == false) 
-            return BadRequest(user.Notification.GetErrors);
+            var user = _userService.Save(model);
+            if (user.Valid() == false)
+                return BadRequest(user.Notification.GetErrors);
 
-        return CreatedAtAction(nameof(GetById),
-            new { Id = user.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, user);
+            return CreatedAtAction(nameof(GetById),
+                new { Id = user.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, user);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
     }
 
     [HttpPut("{id}")]
     public IActionResult Put(Guid id, [FromBody] UserModel model)
     {
-        if (Guid.Empty == id) return BadRequest("Invalid Identifier");
-        if (model?.Id == id) return UnprocessableEntity("Identifier diverges from solicited object!");
-        
-        if (_userService.Exists(id) == false) return NotFound();
+        try
+        {
+            if (Guid.Empty == id) return BadRequest("Invalid Identifier");
+            if (model?.Id == id) return UnprocessableEntity("Identifier diverges from solicited object!");
 
-        var user = _userService.Edit(model);
-        
-        return (!user.Valid())
-            ? BadRequest(user.Notification.GetErrors)
-            : Ok(user);
+            if (_userService.Exists(id) == false) return NotFound();
+
+            var user = _userService.Edit(model);
+
+            return (!user.Valid())
+                ? BadRequest(user.Notification.GetErrors)
+                : Ok(user);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(Guid id)
     {
-        if (_userService.Exists(id) == false) return NotFound();
+        try
+        {
+            if (_userService.Exists(id) == false) return NotFound();
 
-        _userService.Delete(id);
-        return Accepted();
+            _userService.Delete(id);
+            return Accepted();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
     }
 }
