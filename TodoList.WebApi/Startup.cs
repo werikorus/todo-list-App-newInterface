@@ -1,18 +1,14 @@
 using System.Text;
 using TodoList.Services.Mappers;
 using AutoMapper;
-using GraphQL.Server;
-using GraphQL.Server.Ui.Playground;
-using GraphQL.Types;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using TodoList.Repositories.Interfaces;
+using TodoList.Repositories.Contexts;
 using TodoList.Repositories.Ioc;
-using TodoList.Repositories.Repositories;
 using TodoList.Services;
 using TodoList.Services.Ioc;
-using TodoList.WebApi.Graph.User;
 using TodoList.WebApi.Ioc;
 
 namespace TodoList.WebApi;
@@ -69,6 +65,8 @@ public class Startup
                     ValidateAudience = false
                 };
             });
+
+        
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
