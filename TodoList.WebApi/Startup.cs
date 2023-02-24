@@ -66,8 +66,6 @@ public class Startup
                     ValidateAudience = false
                 };
             });
-
-        
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
