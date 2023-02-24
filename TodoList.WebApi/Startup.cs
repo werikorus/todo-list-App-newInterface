@@ -32,6 +32,7 @@ public class Startup
             .AddFluentValidation();
 
         services.AddDbContext(Configuration);
+
         services.RegisterServices();
         services.AddRepository();
         services.AddAutoMapper();
