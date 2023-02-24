@@ -105,7 +105,7 @@ public class UserController : TodoListControllerBase
             if (_userService.Exists(id) == false) return NotFound();
 
             _userService.Delete(id);
-            return Accepted();
+            return Accepted("Deletion sucessfully");
         }
         catch (Exception e)
         {
