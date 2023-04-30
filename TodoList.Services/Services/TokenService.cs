@@ -7,9 +7,9 @@ using TodoList.Services.Abstractions;
 using TodoList.Services.Interfaces;
 
 namespace TodoList.Services.Services;
-public class TokenService : ITokenService
+public class TokenService
 {
-    public string GenerateToken(User user)
+    public static string GenerateToken(User user)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(Settings.Secret);

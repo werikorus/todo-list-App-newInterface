@@ -52,4 +52,9 @@
       <Folder Include="Graph\TasksList" />
     </ItemGroup>
 
+   
+    <ItemGroup>
+      <None Remove="Controllers\v1\AuthenticatorController" />
+    </ItemGroup>
+
 </Project>

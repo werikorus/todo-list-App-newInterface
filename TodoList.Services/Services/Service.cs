@@ -1,5 +1,6 @@
 using AutoMapper;
 using TodoList.Domain.Abstraction;
+using TodoList.Domain.Entities.Users;
 using TodoList.Repositories.Abstractions;
 using TodoList.Services.Abstractions;
 using TodoList.Services.Models;
@@ -74,4 +75,7 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
         if (entity.Valid()) await _repository.InserAsync(entity, cancellationToken);
         return entity;
     }
+
+    public User LoginUser(string email, string password) 
+        => _repository.LoginUser(email, password);
 }
