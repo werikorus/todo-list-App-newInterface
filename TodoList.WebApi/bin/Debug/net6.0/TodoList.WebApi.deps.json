@@ -2190,6 +2190,7 @@
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.1",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.1",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "7.0.1",
           "System.Linq.Dynamic.Core": "1.2.24",
           "TodoList.Domain": "1.0.0"
         },
