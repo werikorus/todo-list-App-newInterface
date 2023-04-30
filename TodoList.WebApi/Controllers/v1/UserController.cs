@@ -12,7 +12,6 @@ namespace TodoList.WebApi.Controllers.v1;
 public class UserController : TodoListControllerBase
 {
     private readonly IUserService _userService;
-
     public UserController(IUserService userService)
     {
         _userService = userService;

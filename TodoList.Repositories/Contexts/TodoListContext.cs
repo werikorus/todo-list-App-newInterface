@@ -12,7 +12,11 @@ public class TodoListContext : DbContext
     
     public DbSet<User> User { get; set;}
     
+<<<<<<< HEAD
+    public DbSet<List> List  { get; set;}
+=======
     public DbSet<List> List { get; set;}
+>>>>>>> 95892949e124d403b37721028fe8b3776398f758
 
     public DbSet<TaskList> TaskList { get; set; }
 

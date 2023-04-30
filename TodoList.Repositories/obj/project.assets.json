@@ -1723,40 +1723,40 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Relational >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.1",
+      "Microsoft.EntityFrameworkCore.Sqlite.Core >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.1",
       "System.Linq.Dynamic.Core >= 1.2.24",
       "TodoList.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\werik\\.nuget\\packages\\": {}
+    "C:\\Users\\werik.cunha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
+      "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
       "projectName": "TodoList.Repositories",
-      "projectPath": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
-      "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
-      "outputPath": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\",
+      "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
+      "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
-              "projectPath": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
+            "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
+              "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
             }
           }
         }
@@ -1797,6 +1797,10 @@
             "target": "Package",
             "version": "[7.0.1, )"
           },
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -1824,8 +1828,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

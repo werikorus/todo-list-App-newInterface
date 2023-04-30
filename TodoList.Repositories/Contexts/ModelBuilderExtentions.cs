@@ -8,9 +8,9 @@ public static class ModelBuilderExtentions
 {
     public static void Seed(this ModelBuilder modelBuilder)
     {
-        /* var userBuilder = new UserBuilder();
+         var userBuilder = new UserBuilder();
 
-         userBuilder
+         /*userBuilder
              .Entity()
              .HasData(new List<User>
              {

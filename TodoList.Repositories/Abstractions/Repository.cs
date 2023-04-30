@@ -1,10 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Abstraction;
 using TodoList.Domain.Entities.Users;
-using System;
 
 namespace TodoList.Repositories.Abstractions;
-
 public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
     where TEntity : Entity<TId>
     where TId : struct
@@ -76,5 +74,14 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
     {
         _dbSet.Remove(await SelectByIdAsync(id, cancellationToken));
         await _context.SaveChangesAsync(true, cancellationToken);
+    }
+
+    public User LoginUser(string email, string passsword)
+    {
+        var user = _context
+            .Set<User>()
+            .FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper() && x.Password == passsword);
+
+        return user;
     }
 }

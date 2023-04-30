@@ -1107,26 +1107,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\werik\\.nuget\\packages\\": {}
+    "C:\\Users\\werik.cunha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj",
+      "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
       "projectName": "TodoList.Domain",
-      "projectPath": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj",
-      "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
-      "outputPath": "C:\\Desenvolvimento\\Projetos\\C#\\todo-list-App-newInterface\\TodoList.Domain\\obj\\",
+      "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
+      "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1176,8 +1175,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

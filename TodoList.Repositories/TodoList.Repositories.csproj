@@ -24,6 +24,7 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="7.0.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -36,6 +37,9 @@
       <Compile Remove="Migrations\TodoListContextModelSnapshot.cs" />
       <Compile Remove="Abstractions\IAuthRepository.cs" />
       <Compile Remove="Abstractions\AuthRepository.cs" />
+      <Compile Remove="Migrations\20230130133228_Initial.cs" />
+      <Compile Remove="Migrations\20230130133228_Initial.Designer.cs" />
+      <Compile Remove="Repositories\AuthenticatiorRepository.cs" />
     </ItemGroup>
 
     <ItemGroup>
