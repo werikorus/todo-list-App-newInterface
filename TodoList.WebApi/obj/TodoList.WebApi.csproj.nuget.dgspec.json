@@ -338,6 +338,10 @@
               "target": "Package",
               "version": "[3.0.0-preview-1490, )"
             },
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
             "Microsoft.AspNet.WebApi.Versioning": {
               "target": "Package",
               "version": "[4.1.1, )"

@@ -10,6 +10,7 @@ using TodoList.Repositories.Ioc;
 using TodoList.Services;
 using TodoList.Services.Ioc;
 using TodoList.WebApi.Ioc;
+using Microsoft.Extensions.Configuration;
 
 namespace TodoList.WebApi;
 
@@ -66,6 +67,7 @@ public class Startup
                     ValidateAudience = false
                 };
             });
+        services.AddApplicationInsightsTelemetry(Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>3e1edbf4-9f70-4ac1-bbc2-4052c40b94da</UserSecretsId>
+        <ApplicationInsightsResourceId>/subscriptions/bc423bad-beba-48eb-998b-55471ee4836a/resourceGroups/app_study/providers/microsoft.insights/components/todo-list-app-api</ApplicationInsightsResourceId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,6 +16,7 @@
         <PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="3.5.0-alpha0046" />
         <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.5.0-alpha0073" />
         <PackageReference Include="GraphQL.SystemTextJson" Version="3.0.0-preview-1490" />
+        <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
         <PackageReference Include="Microsoft.AspNet.WebApi.Versioning" Version="4.1.1" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
