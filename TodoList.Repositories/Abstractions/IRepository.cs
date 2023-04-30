@@ -25,5 +25,5 @@ public interface IRepository<TEntity, in Tid>
 
     void Update(TEntity entity);
     Task UpdateAsync(TEntity entity, CancellationToken cancellationToken);
-    
+    User LoginUser(string email, string password);
 }

@@ -1723,6 +1723,7 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Relational >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.1",
+      "Microsoft.EntityFrameworkCore.Sqlite.Core >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.1",
       "System.Linq.Dynamic.Core >= 1.2.24",
       "TodoList.Domain >= 1.0.0"
@@ -1796,6 +1797,10 @@
             "target": "Package",
             "version": "[7.0.1, )"
           },
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -1823,7 +1828,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   },
