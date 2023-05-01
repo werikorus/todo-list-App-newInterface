@@ -27,6 +27,7 @@ namespace TodoList.WebApi.Controllers.v1
                     return NotFound("User not found to authenticate!");
 
                 var token = TokenService.GenerateToken(user);
+               
                 return Ok(token);
             }
             catch
