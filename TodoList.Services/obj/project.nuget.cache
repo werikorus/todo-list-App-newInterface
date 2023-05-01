@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Be3JA33J1pUA9yTdfFDxDO0Jg8EL7Ey3nAO+IFfvcioYvNdF8QKmwFGohQPUpCsImvSrUkTpqf70H4BO5mLd5A==",
+  "dgSpecHash": "3OVaWfjq9N69AZzw6RJRfrEg2GI6N5To8C5/Xb6wX/8l926T2raphfPUDGfgWuuMaJ0WBVGEfw9RyMYf7bgFKQ==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\werik.cunha\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\werik.cunha\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
