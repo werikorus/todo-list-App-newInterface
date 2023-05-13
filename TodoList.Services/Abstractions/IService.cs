@@ -33,4 +33,6 @@ public interface IService<TEntity, in TModel, in TId>
 
     Task<TEntity> SaveAsync(TModel model, CancellationToken cancellationToken);
     User LoginUser(string email, string password);
+    
+    Task<User> LoginUserAsync(string email, string password, CancellationToken cancellationToken);
 }
