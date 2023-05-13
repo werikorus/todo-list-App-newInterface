@@ -33,8 +33,8 @@ public class TokenService
         var response = new
         {
             token_type = "Bearer",
+            expires_in = "2 Hours",
             access_token = tokenHandler.WriteToken(token),
-            expires_in = "2 Hours"
         };
         return response; 
     }
