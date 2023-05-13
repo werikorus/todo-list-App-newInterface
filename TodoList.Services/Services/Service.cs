@@ -79,6 +79,6 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
     public User LoginUser(string email, string password) 
         => _repository.LoginUser(email, password);
 
-    public Task<User> LoginUserAsync(string email, string password, CancellationToken cancellationToken)
-        => _repository.LoginUserAsync(email, password, cancellationToken);
+    public async Task<User> LoginUserAsync(string email, string password, CancellationToken cancellationToken)
+        => await _repository.LoginUserAsync(email, password, cancellationToken);
 }

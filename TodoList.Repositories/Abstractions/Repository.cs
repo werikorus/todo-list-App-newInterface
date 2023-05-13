@@ -84,4 +84,13 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
 
         return user;
     }
+    
+    public async Task<User> LoginUserAsync(string email, string passsword, CancellationToken cancellationToken)
+    {
+        var user = await _context
+            .Set<User>()
+            .FirstOrDefaultAsync(x => x.Email.ToUpper() == email.ToUpper() && x.Password == passsword, cancellationToken: cancellationToken);
+
+        return user;
+    }
 }
