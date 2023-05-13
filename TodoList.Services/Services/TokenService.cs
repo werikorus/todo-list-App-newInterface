@@ -18,11 +18,10 @@ public class TokenService
         {
             Subject = new ClaimsIdentity(new Claim[]
             {
-                new Claim(ClaimTypes.UserData, user.Id.ToString()),
+                new Claim(ClaimTypes.GivenName, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role),
-                
             }),
 
             Expires = DateTime.UtcNow.AddHours(2),
