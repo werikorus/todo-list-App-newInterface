@@ -1,4 +1,5 @@
 using System.Linq.Dynamic.Core;
+using System.Xml.Linq;
 using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Abstraction;
 using TodoList.Domain.Entities.Lists;
@@ -115,5 +116,25 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
             .ToListAsync();
         
         return lists;
+    }
+
+    public IList<TaskList> GetTasksByUserId(Guid userId)
+    {
+        var tasks = _context
+            .Set<TaskList>()
+            .Where(x => x.IdUser == userId)
+            .ToList();
+
+        return tasks;
+    }
+
+    public async Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken)
+    {
+        var tasks = await _context
+            .Set<TaskList>()
+            .Where(x => x.IdUser == userId)
+            .ToListAsync();
+
+        return tasks;
     }
 }

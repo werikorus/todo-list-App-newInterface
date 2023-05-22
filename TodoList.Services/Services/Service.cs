@@ -1,6 +1,7 @@
 using AutoMapper;
 using TodoList.Domain.Abstraction;
 using TodoList.Domain.Entities.Lists;
+using TodoList.Domain.Entities.TasksList;
 using TodoList.Domain.Entities.Users;
 using TodoList.Repositories.Abstractions;
 using TodoList.Services.Abstractions;
@@ -88,4 +89,10 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
 
     public async Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken)
         => await _repository.GetListsByUserIdAsync(userId, cancellationToken);
+
+    public IList<TaskList> GetTasksByUserId(Guid userId)
+        => _repository.GetTasksByUserId(userId);
+
+    public async Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken)
+        => await _repository.GetTasksByUserIdAsync(userId, cancellationToken);
 }

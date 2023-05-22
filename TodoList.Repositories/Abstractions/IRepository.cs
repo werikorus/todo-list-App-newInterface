@@ -1,5 +1,6 @@
 using TodoList.Domain.Abstraction;
 using TodoList.Domain.Entities.Lists;
+using TodoList.Domain.Entities.TasksList;
 using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Repositories.Abstractions;
@@ -39,4 +40,8 @@ public interface IRepository<TEntity, in Tid>
     IList<List> GetListsByUserId(Guid userId);
     
     Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken);
+    
+    IList<TaskList> GetTasksByUserId(Guid userId);
+    
+    Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 }

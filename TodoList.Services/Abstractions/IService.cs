@@ -1,5 +1,6 @@
 using TodoList.Domain.Abstraction;
 using TodoList.Domain.Entities.Lists;
+using TodoList.Domain.Entities.TasksList;
 using TodoList.Services.Models;
 using TodoList.Domain.Entities.Users;
 
@@ -41,4 +42,8 @@ public interface IService<TEntity, in TModel, in TId>
     IList<List> GetListsByUserId(Guid userId);
 
     Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken);
+
+    IList<TaskList> GetTasksByUserId(Guid userId);
+
+    Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 }
