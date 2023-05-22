@@ -1,5 +1,8 @@
+using System.Linq.Dynamic.Core;
 using Microsoft.EntityFrameworkCore;
 using TodoList.Domain.Abstraction;
+using TodoList.Domain.Entities.Lists;
+using TodoList.Domain.Entities.TasksList;
 using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Repositories.Abstractions;
@@ -92,5 +95,25 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
             .FirstOrDefaultAsync(x => x.Email.ToUpper() == email.ToUpper() && x.Password == passsword, cancellationToken: cancellationToken);
 
         return user;
+    }
+    
+    public IList<List> GetListsByUserId(Guid userId)
+    {
+        var lists = _context
+            .Set<List>()
+            .Where(x => x.IdUser == userId)
+            .ToList();
+        
+        return  lists;
+    }
+    
+    public async Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken)
+    {
+        var lists = await _context
+            .Set<List>()
+            .Where(x => x.IdUser == userId)
+            .ToListAsync();
+        
+        return lists;
     }
 }

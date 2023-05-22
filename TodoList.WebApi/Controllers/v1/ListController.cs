@@ -16,6 +16,25 @@ public class ListController : TodoListControllerBase
     }
 
     [HttpGet("UserId/{id}")]
+    public IActionResult GetListsByUserId(Guid id)
+    {
+        try
+        {
+            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+
+            var list = _listService.GetListsByUserId(id);
+
+            return (list is null)
+                ? NotFound("List not found!")
+                : Ok(list);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
+    }
+    
+    [HttpGet("{id}")]
     public IActionResult GetById(Guid id)
     {
         try
