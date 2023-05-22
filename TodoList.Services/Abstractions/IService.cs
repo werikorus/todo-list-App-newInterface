@@ -1,4 +1,5 @@
 using TodoList.Domain.Abstraction;
+using TodoList.Domain.Entities.Lists;
 using TodoList.Services.Models;
 using TodoList.Domain.Entities.Users;
 
@@ -36,4 +37,8 @@ public interface IService<TEntity, in TModel, in TId>
     User LoginUser(string email, string password);
     
     Task<User> LoginUserAsync(string email, string password, CancellationToken cancellationToken);
+
+    IList<List> GetListsByUserId(Guid userId);
+
+    Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 }
