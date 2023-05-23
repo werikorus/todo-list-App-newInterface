@@ -40,8 +40,8 @@ public interface IRepository<TEntity, in Tid>
     IList<List> GetListsByUserId(Guid userId);
     
     Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken);
-    
-    IList<TaskList> GetTasksByUserId(Guid userId);
+
+    IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser);
     
     Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 }

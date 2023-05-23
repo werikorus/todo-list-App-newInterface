@@ -43,7 +43,7 @@ public interface IService<TEntity, in TModel, in TId>
 
     Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 
-    IList<TaskList> GetTasksByUserId(Guid userId);
+    IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser);
 
     Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 }
