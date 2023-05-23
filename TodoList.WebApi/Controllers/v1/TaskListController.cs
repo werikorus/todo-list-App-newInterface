@@ -15,13 +15,15 @@ public class TaskListController : TodoListControllerBase
         _taskListService = taskListService;
     }
 
-    [HttpGet("UserId/{id}")]
-    public IActionResult GetById(Guid id)
+    [HttpGet("ListId/{idList}UserId/{idUser}")]
+    public IActionResult GetById(Guid idList, Guid idUser)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
-            var task = _taskListService.GetTasksByUserId(id);
+            if (Guid.Empty == idUser && Guid.Empty == idList) 
+                return BadRequest("Invalid Identifier!");
+            
+            var task = _taskListService.GetTasksByListIdAndUserId(idList, idUser);
 
             return (task is null)
                 ? NotFound("Task not found!")

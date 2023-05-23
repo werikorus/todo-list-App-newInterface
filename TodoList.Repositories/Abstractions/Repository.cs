@@ -118,11 +118,11 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
         return lists;
     }
 
-    public IList<TaskList> GetTasksByUserId(Guid userId)
+    public IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser)
     {
         var tasks = _context
             .Set<TaskList>()
-            .Where(x => x.IdUser == userId)
+            .Where(x => x.IdList == idList && x.IdUser == idUser)
             .ToList();
 
         return tasks;
