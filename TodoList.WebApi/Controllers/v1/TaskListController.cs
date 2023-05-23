@@ -21,7 +21,7 @@ public class TaskListController : TodoListControllerBase
         try
         {
             if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
-            var task = _taskListService.GetById(id);
+            var task = _taskListService.GetTasksByUserId(id);
 
             return (task is null)
                 ? NotFound("Task not found!")

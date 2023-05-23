@@ -48,6 +48,6 @@ public class TaskListBuilder : Builder<TaskListBuilder, TaskList, Guid>, ITasksL
         return this;
     }
     
-
-    public override TaskList Build() => new TaskList(Id, _idList,_idUser, _descriptionTask, _done, _dateCreate, _dateUpdate);
+    public override TaskList Build() 
+        => new TaskList(Id, _idList, _idUser, _descriptionTask, _done, _dateCreate, _dateUpdate);
 }
