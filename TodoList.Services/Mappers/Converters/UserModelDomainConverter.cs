@@ -15,6 +15,7 @@ public class UserModelDomainConverter : ITypeConverter<UserModel, User>
                 .WithPassword(source.Password)
                 .WithEmail(source.Email)
                 .WithRole(source.Role)
+                .WithUrlAvatar(source.UrlAvatar)
                 .WithDateCreate(source.DateCreate)
                 .WithDateUpdate(source.DateUpdate)
                 .Build();

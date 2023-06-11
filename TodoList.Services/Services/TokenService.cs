@@ -3,9 +3,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using TodoList.Domain.Entities.Users;
-using TodoList.Services.Abstractions;
-using TodoList.Services.Interfaces;
-using Newtonsoft.Json;
 
 namespace TodoList.Services.Services;
 public class TokenService

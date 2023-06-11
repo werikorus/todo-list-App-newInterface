@@ -9,16 +9,18 @@ public class User : Entity<Guid>
     public string Password { get; set; }
     public string Email { get; set; }
     public string Role { get; set; }
+    public string UrlAvatar { get; set; }
     public DateTime DateCreate { get; set; }
     public DateTime DateUpdate { get; set; }
 
-    internal User(Guid id, string name, string password, string email, string role, DateTime dateCreate, DateTime dateUpdate)
+    internal User(Guid id, string name, string password, string email, string role, string urlAvatar, DateTime dateCreate, DateTime dateUpdate)
     {
         SetId(id);
         SetName(name);
         SetPassword(password);
         SetEmail(email);
         SetRole(role);
+        SetUrlAvatar(urlAvatar);
         SetDateCreate(dateCreate);
         SetDateUpdate(dateUpdate);
     }
@@ -40,7 +42,7 @@ public class User : Entity<Guid>
 
     private void SetName(string name)
     {
-        if (name.Equals(Guid.Empty))
+        if (name.Equals(string.Empty))
         {
             Notification.AddError(DomainResource.TodoList_Name_invalid);
             return;
@@ -80,6 +82,11 @@ public class User : Entity<Guid>
         }
 
         Role = role;
+    }
+
+    private void SetUrlAvatar(string urlAvatar)
+    {
+        UrlAvatar = urlAvatar;
     }
 
 

@@ -57,3 +57,5 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+
+Settings.cs
