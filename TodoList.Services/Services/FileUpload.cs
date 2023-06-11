@@ -1,11 +1,11 @@
 using System.Text.RegularExpressions;
 using Azure.Storage.Blobs;
-
+using TodoList.Services.Interfaces;
 
 
 namespace TodoList.Services.Services;
 
-public class FileUpload
+public class FileUpload : IFileUpload
 {
     public string UploadBase64Image(string base64Image, string container)
     {

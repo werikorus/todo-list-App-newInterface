@@ -39,18 +39,11 @@
       <Compile Remove="Models\User.cs" />
       <Compile Remove="Models\UserAuth.cs" />
       <Compile Remove="Services\AuthService.cs" />
-      <Compile Update="Services\blob_key.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>blob_key.resx</DependentUpon>
-      </Compile>
+      <Compile Remove="Services\blob_key.Designer.cs" />
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Update="Services\blob_key.resx">
-        <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>blob_key.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
+      <EmbeddedResource Remove="Services\blob_key.resx" />
     </ItemGroup>
 
 </Project>

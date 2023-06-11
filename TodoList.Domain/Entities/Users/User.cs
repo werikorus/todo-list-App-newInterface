@@ -88,8 +88,7 @@ public class User : Entity<Guid>
     {
         UrlAvatar = urlAvatar;
     }
-
-
+    
     private void SetDateCreate(DateTime dateCreate)
     {
         if (string.IsNullOrEmpty(dateCreate.ToString(CultureInfo.InvariantCulture)))

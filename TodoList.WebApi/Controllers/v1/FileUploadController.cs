@@ -1,16 +1,33 @@
 using Microsoft.AspNetCore.Mvc;
+using TodoList.Services.Interfaces;
 using TodoList.Services.Services;
-using TodoList.WebApi.Controllers;
 
 namespace TodoList.WebApi.Controllers.v1;
 
 [ApiVersion("1")]
 public class FileUploadController : TodoListControllerBase
 {
+    private readonly IFileUpload _fileUpload;
+        
+    public FileUploadController(IFileUpload fileUpload)
+    {
+        _fileUpload = fileUpload;
+    }
+
+    [HttpPost]
     public string Post([FromBody] UploadImageCommand command)
     {
-        var uploadServices = new FileUpload();
-        return uploadServices.UploadBase64Image(command.Image, "user-avatar");
+        try
+        {  
+            var urlImg = _fileUpload.UploadBase64Image(command.Image, "user-avatar");
+            return urlImg;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+
     }
     
     public class UploadImageCommand
