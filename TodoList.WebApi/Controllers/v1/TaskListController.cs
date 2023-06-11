@@ -15,7 +15,7 @@ public class TaskListController : TodoListControllerBase
         _taskListService = taskListService;
     }
 
-    [HttpGet("ListId/{idList}UserId/{idUser}")]
+    [HttpGet("ListId={idList}/UserId={idUser}")]
     public IActionResult GetById(Guid idList, Guid idUser)
     {
         try

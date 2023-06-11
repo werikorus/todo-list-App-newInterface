@@ -8,6 +8,7 @@ public interface IUserBuilder : IBuilder<User, Guid>
     IUserBuilder WithPassword(string password);
     IUserBuilder WithEmail(string email);
     IUserBuilder WithRole(string role);
+    IUserBuilder WithUrlAvatar(string urlAvatar);
     IUserBuilder WithDateCreate(DateTime dateCreate);
     IUserBuilder WithDateUpdate(DateTime dateUpdate);
 }

@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using TodoList.Domain.Abstraction.Notifications;
-using TodoList.Domain.Dto;
 using TodoList.Domain.Entities.Users;
 using TodoList.Services.Models;
 using TodoList.Services.Interfaces;
-using TodoList.Services.Services;
 
 namespace TodoList.WebApi.Controllers.v1;
 

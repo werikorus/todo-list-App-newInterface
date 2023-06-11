@@ -313,3 +313,8 @@ C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\System.Diagnostics.Perf
 C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\Azure.Core.dll
+C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\Azure.Storage.Blobs.dll
+C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\Azure.Storage.Common.dll
+C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\System.IO.Hashing.dll
+C:\Projetos\C#\TodoList\TodoList.WebApi\bin\Debug\net6.0\System.Memory.Data.dll
