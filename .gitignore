@@ -27,7 +27,6 @@ cache
 .cache
 .cache/
 
-
 *.swp
 *.*~
 project.lock.json
