@@ -15,7 +15,7 @@ public class TaskListController : TodoListControllerBase
         _taskListService = taskListService;
     }
 
-    [HttpGet("ListId={idList}/UserId={idUser}")]
+    [HttpGet("ListId={idList}&UserId={idUser}")]
     public IActionResult GetById(Guid idList, Guid idUser)
     {
         try
@@ -28,23 +28,6 @@ public class TaskListController : TodoListControllerBase
             return (task is null)
                 ? NotFound("Task not found!")
                 : Ok(task);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e);
-        }
-    }
-
-    [HttpGet]
-    public IActionResult GetAll()
-    {
-        try
-        {
-            var tasks = _taskListService.GetAll();
-
-            return (tasks.Count == 0)
-                ? NotFound()
-                : Ok(tasks);
         }
         catch (Exception e)
         {
