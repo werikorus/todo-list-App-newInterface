@@ -17,7 +17,7 @@ public class TokenService
                 new Claim(ClaimTypes.GivenName, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Uri, user.UrlAvatar),
+                new Claim(ClaimTypes.Webpage, user.UrlAvatar),
                 new Claim(ClaimTypes.Role, user.Role),
             }),
 
