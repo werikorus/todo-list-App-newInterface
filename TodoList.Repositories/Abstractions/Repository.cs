@@ -137,4 +137,10 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
 
         return tasks;
     }
+
+    public void DeleteAllListsByUserId (Guid userId)
+    {
+        _dbSet.Remove((TEntity)GetListsByUserId(userId));    
+        _context.SaveChanges();
+    }
 }

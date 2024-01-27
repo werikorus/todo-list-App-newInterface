@@ -95,4 +95,10 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
 
     public async Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken)
         => await _repository.GetTasksByUserIdAsync(userId, cancellationToken);
+
+    public void DeleteAllListsByUserId(Guid userId)
+    {
+        if (Equals(userId, Guid.Empty)) return;
+        _repository.DeleteAllListsByUserId(userId);
+    }
 }

@@ -9,10 +9,12 @@ namespace TodoList.WebApi.Controllers.v1;
 public class ListController : TodoListControllerBase
 {
     private readonly IListService _listService;
+    private readonly IUserService _userService;
 
-    public ListController(IListService listService)
+    public ListController(IListService listService, IUserService userService)
     {
         _listService = listService;
+        _userService = userService;
     }
 
     [HttpGet("UserId/{id}")]
@@ -122,6 +124,21 @@ public class ListController : TodoListControllerBase
             if (!_listService.Exists(id)) return NotFound("List not found!");
             _listService.Delete(id);
             return Accepted("Deletion sucessfully");
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e);
+        }
+    }
+
+    [HttpDelete("UserId={userId}")]
+    public IActionResult DeleteAllListsByUserId(Guid userId)
+    {
+        try 
+        {
+            if (!_userService.Exists(userId)) return NotFound("User not found for list delete!");
+            _listService.DeleteAllListsByUserId(userId);
+            return Accepted();
         }
         catch (Exception e)
         {

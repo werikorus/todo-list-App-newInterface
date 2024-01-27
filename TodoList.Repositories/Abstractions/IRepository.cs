@@ -44,4 +44,6 @@ public interface IRepository<TEntity, in Tid>
     IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser);
     
     Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken);
+
+    void DeleteAllListsByUserId(Guid userId);
 }
