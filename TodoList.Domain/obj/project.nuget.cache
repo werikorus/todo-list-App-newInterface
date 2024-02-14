@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Cz1zC7rb0F3OmDNOHx81Y6LL5Y0TdB6NM6Nh6DJVzPX9edlTVjuADZxz1DvGmIOAt24iQXQGXS2ONjotq1cEjA==",
+  "dgSpecHash": "p77pB5pQ3vTApY8yrbDJ+41Ia2R/k9y3TI/gpE7V14XvfOqPGzOhnAI9Y8ik3/ejkndmurI5GWAypzj5cfZkzw==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
   "expectedPackageFiles": [

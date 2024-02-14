@@ -28,7 +28,6 @@ public class FileUploadController : TodoListControllerBase
         {
             return BadRequest(e);
         }
-
     }
     
     public class UploadImageCommand

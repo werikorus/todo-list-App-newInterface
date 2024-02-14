@@ -15,10 +15,9 @@ public class TasksListConfig : IEntityTypeConfiguration<TaskList>
         builder.Property(c => c.DescriptionTask)
             .HasColumnName("DescriptionTask")
             .IsRequired();
-        
+
         builder.Property(c => c.Done)
-            .HasColumnName("Done")
-            .IsRequired();
+            .HasColumnName("Done");
 
         builder.Property(c => c.IdList)
             .HasColumnName("IdList")

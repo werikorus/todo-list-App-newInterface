@@ -19,9 +19,17 @@ public class UserConfig :  IEntityTypeConfiguration<User>
         builder.Property(c => c.Email)
             .HasColumnName("Email")
             .IsRequired();
-
+        
         builder.Property(c => c.Password)
             .HasColumnName("Password")
+            .IsRequired();
+
+        builder.Property(c => c.Role)
+            .HasColumnName("Role")
+            .IsRequired();
+
+        builder.Property(c => c.UrlAvatar)
+            .HasColumnName("UrlAvatar")
             .IsRequired();
 
         builder.Property(c => c.DateCreate)

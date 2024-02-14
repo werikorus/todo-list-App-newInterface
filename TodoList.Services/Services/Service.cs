@@ -74,7 +74,7 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
     public async Task<TEntity> SaveAsync(TModel model, CancellationToken cancellationToken)
     {
         var entity = _mapper.Map<TEntity>(model);
-        if (entity.Valid()) await _repository.InserAsync(entity, cancellationToken);
+        if (entity.Valid()) await _repository.InsertAsync(entity, cancellationToken);
         return entity;
     }
 

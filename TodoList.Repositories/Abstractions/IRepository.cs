@@ -19,7 +19,7 @@ public interface IRepository<TEntity, in Tid>
     
     void Insert(TEntity entity);
     
-    Task InserAsync(TEntity entity, CancellationToken cancellationToken);
+    Task InsertAsync(TEntity entity, CancellationToken cancellationToken);
     
     IList<TEntity> SelectAll();
     

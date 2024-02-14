@@ -34,7 +34,7 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
         _context.SaveChanges();
     }
 
-    public virtual async Task InserAsync(TEntity entity, CancellationToken cancellationToken)
+    public virtual async Task InsertAsync(TEntity entity, CancellationToken cancellationToken)
     {
         if (!await ExistsAsync(entity.Id, cancellationToken).ConfigureAwait(false)) return;
 
