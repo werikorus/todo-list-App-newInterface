@@ -3,4 +3,4 @@ using TodoList.Repositories.Abstractions;
 
 namespace TodoList.Repositories.Interfaces;
 
-public interface IUserRepository : IRepository<User, Guid> {}
+public interface IUserRepository : IRepository<User, Guid> { }

@@ -1,6 +1,5 @@
-using System.Linq.Dynamic.Core;
-using System.Xml.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core;
 using TodoList.Domain.Abstraction;
 using TodoList.Domain.Entities.Lists;
 using TodoList.Domain.Entities.TasksList;
@@ -88,7 +87,7 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
 
         return user;
     }
-    
+
     public async Task<User> LoginUserAsync(string email, string passsword, CancellationToken cancellationToken)
     {
         var user = await _context
@@ -97,24 +96,24 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
 
         return user;
     }
-    
+
     public IList<List> GetListsByUserId(Guid userId)
     {
         var lists = _context
             .Set<List>()
             .Where(x => x.IdUser == userId)
             .ToList();
-        
-        return  lists;
+
+        return lists;
     }
-    
+
     public async Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken)
     {
         var lists = await _context
             .Set<List>()
             .Where(x => x.IdUser == userId)
             .ToListAsync();
-        
+
         return lists;
     }
 
@@ -138,9 +137,9 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
         return tasks;
     }
 
-    public void DeleteAllListsByUserId (Guid userId)
+    public void DeleteAllListsByUserId(Guid userId)
     {
-        _dbSet.Remove((TEntity)GetListsByUserId(userId));    
+        _dbSet.Remove((TEntity)GetListsByUserId(userId));
         _context.SaveChanges();
     }
 }

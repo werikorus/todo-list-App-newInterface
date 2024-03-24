@@ -1,15 +1,11 @@
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using TodoList.Repositories.Abstractions;
-using TodoList.Repositories.Repositories;
-using TodoList.Services.Abstractions;
 using TodoList.Services.Interfaces;
 using TodoList.Services.Mappers;
 using TodoList.Services.Services;
 using TodoList.Services.Validators;
 
-namespace TodoList.Services.Ioc; 
+namespace TodoList.Services.Ioc;
 public static class IoCServices
 {
     public static IServiceCollection AddAutoMapper(this IServiceCollection services)

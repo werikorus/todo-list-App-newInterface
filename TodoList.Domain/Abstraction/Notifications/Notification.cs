@@ -11,9 +11,9 @@ public class Notification : INotification
     public string Error => string.Join(", ", GetErrors);
 
     public void AddError(string error) => GetErrors.Add(error);
-    
+
     public void AddError(INotification notification) => AddErrors(notification?.GetErrors!);
-    
+
     public void AddError(string error, INotification externalNotification)
     {
         AddError(error);
@@ -25,7 +25,7 @@ public class Notification : INotification
 
     public void AddErrors(IEnumerable<string> errors)
     {
-        if(errors is null) return;
+        if (errors is null) return;
         GetErrors.AddRange(errors);
     }
 }

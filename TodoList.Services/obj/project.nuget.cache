@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gIMqo1Fj6M/E6BGoYTTdB5QfFiy3gFmDqwBAocHK10zHxgklRwZ9Sl4aMekXQv51mrKkLC1KP3tIXFh451fDqA==",
+  "dgSpecHash": "kpSAS6t4HeVcSnGId6mUMp3nY5vSiubF3ia2ynKBjY1j+MnRTiQo4DAcZKT8U1Dq1o+VML4WQQNLSDtnZ72pdg==",
   "success": true,
-  "projectFilePath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
+  "projectFilePath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\werik\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\werik\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

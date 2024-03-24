@@ -8,5 +8,5 @@ namespace TodoList.Repositories.Repositories;
 public class UserRepository : Repository<User, Guid>, IUserRepository
 {
     public UserRepository(TodoListContext context)
-        : base(context) {}
+        : base(context) { }
 }

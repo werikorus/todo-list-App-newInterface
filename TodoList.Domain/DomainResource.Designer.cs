@@ -32,7 +32,6 @@ namespace TodoList.Domain {
         public static string TodoList_Password_invalid;
         public static string TodoList_DateCreate_invalid;
         public static string TodoList_DateUpdate_invalid;
-        public static string MeuEstudo_Thing_invalid;
         public static string TodoList_dateUpdate_invalid;
         public static string TodoList_dateCreate_invalid;
         public static string TodoList_Identifier_invalid;

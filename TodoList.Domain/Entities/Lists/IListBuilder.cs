@@ -1,5 +1,4 @@
 using TodoList.Domain.Abstraction.Builders;
-using TodoList.Domain.Entities;
 
 namespace TodoList.Domain.Entities.Lists;
 

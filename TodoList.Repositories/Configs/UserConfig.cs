@@ -4,12 +4,12 @@ using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Repositories.Configs;
 
-public class UserConfig :  IEntityTypeConfiguration<User>
+public class UserConfig : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.ToTable(nameof(User));
-        
+
         builder.HasKey(c => c.Id);
 
         builder.Property(c => c.Name)

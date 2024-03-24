@@ -1,4 +1,3 @@
-using System.Data;
 using FluentValidation;
 using TodoList.Services.Models;
 
@@ -29,10 +28,10 @@ public class UserModelValidator : AbstractValidator<UserModel>
         RuleFor(x => x.DateCreate)
             .NotNull().WithMessage("DateCreate for User must not be NULL!")
             .NotEmpty().WithMessage("DateCreate for User must not be EMPTY!");
-        
+
         RuleFor(x => x.DateUpdate)
             .NotNull().WithMessage("DateUpdate for User must not be NULL!")
             .NotEmpty().WithMessage("DateUpdate for User must not be EMPTY!");
     }
-    
+
 }

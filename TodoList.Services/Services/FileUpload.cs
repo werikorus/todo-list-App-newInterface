@@ -1,5 +1,5 @@
-using System.Text.RegularExpressions;
 using Azure.Storage.Blobs;
+using System.Text.RegularExpressions;
 using TodoList.Services.Interfaces;
 
 
@@ -10,7 +10,7 @@ public class FileUpload : IFileUpload
     public string UploadBase64Image(string base64Image, string container)
     {
         var fileName = Guid.NewGuid() + ".jpg";
-        
+
         var data = new Regex(@"^data:image\/[a-z]+;base64,").Replace(base64Image, "");
 
         byte[] imageBytes = Convert.FromBase64String(data);

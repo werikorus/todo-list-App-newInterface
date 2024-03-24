@@ -4030,11 +4030,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
+      "projectUniqueName": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
       "projectName": "TodoList.Services",
-      "projectPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
+      "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
       "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
-      "outputPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Services\\obj\\",
+      "outputPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4051,11 +4051,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
-              "projectPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
+            "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
+              "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
             },
-            "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj": {
-              "projectPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj"
+            "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj": {
+              "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj"
             }
           }
         }

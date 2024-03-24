@@ -1,16 +1,13 @@
-using System.Text;
-using TodoList.Services.Mappers;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using TodoList.Repositories.Contexts;
+using System.Text;
 using TodoList.Repositories.Ioc;
 using TodoList.Services;
 using TodoList.Services.Ioc;
+using TodoList.Services.Mappers;
 using TodoList.WebApi.Ioc;
-using Microsoft.Extensions.Configuration;
 
 namespace TodoList.WebApi;
 
@@ -39,7 +36,7 @@ public class Startup
         services.AddAutoMapper();
         services.ConfigureGraphQlServices(Configuration, HostEnvironment);
         services.AddEndpointsApiExplorer();
-        
+
         services.AddSwaggerGen(c =>
         {
             c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
@@ -76,13 +73,13 @@ public class Startup
         {
             app.UseDeveloperExceptionPage();
         }
-        
+
         app.UseSwagger();
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "To Do List Api v1"));
 
         app.UseHttpsRedirection();
         app.UseRouting();
-        
+
         app.UseGraphQLPlayground();
 
         app.UseCors(x => x
@@ -90,7 +87,7 @@ public class Startup
             .AllowAnyMethod()
             .AllowAnyHeader()
             .SetIsOriginAllowed(origin => true));
-        
+
         app.UseAuthorization();
         app.UseEndpoints(endpoints => endpoints.MapControllers());
     }

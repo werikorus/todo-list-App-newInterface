@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using TodoList.Domain.Entities.TasksList;
 using TodoList.Services.Interfaces;
 using TodoList.Services.Models;
 
@@ -20,9 +19,9 @@ public class TaskListController : TodoListControllerBase
     {
         try
         {
-            if (Guid.Empty == idUser && Guid.Empty == idList) 
+            if (Guid.Empty == idUser && Guid.Empty == idList)
                 return BadRequest("Invalid Identifier!");
-            
+
             var task = _taskListService.GetTasksByListIdAndUserId(idList, idUser);
 
             return (task is null)

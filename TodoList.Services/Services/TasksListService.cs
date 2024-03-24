@@ -6,6 +6,6 @@ using TodoList.Services.Models;
 namespace TodoList.Services.Services;
 public class TasksListService : Service<TaskList, TaskListModel, Guid>, ITasksListService
 {
-    public TasksListService(ITaskListRepository taskListRepository, IMapper mapper) 
-        : base(taskListRepository, mapper) {}
+    public TasksListService(ITaskListRepository taskListRepository, IMapper mapper)
+        : base(taskListRepository, mapper) { }
 }

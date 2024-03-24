@@ -1,5 +1,4 @@
 using TodoList.Domain.Abstraction;
-using TodoList.Domain.Entities.Lists;
 
 namespace TodoList.Domain.Entities.TasksList;
 
@@ -92,7 +91,7 @@ public class TaskList : Entity<Guid>
 
         DateCreate = dateCreate;
     }
-    
+
     private void SetIdUser(Guid idUser)
     {
         if (idUser.Equals(Guid.Empty))

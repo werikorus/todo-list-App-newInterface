@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zM4/uYxirnPB9oXkAw0iDpy+FPR3Nq6ZWDaEf3lV2bE2jsDd5QaSC3+THYf0PTNUq0W4PRMtqa+541ebL3NmEQ==",
+  "dgSpecHash": "4eamxvgVAat0LByiFX86msBao81POxC1ffbpeXgC+/TXUcmmt7tzo5WIiVvQ4No5wcx+ALezbJKvteCvEw+3Nw==",
   "success": true,
-  "projectFilePath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
+  "projectFilePath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\werik\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\werik\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",

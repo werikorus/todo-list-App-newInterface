@@ -16,7 +16,7 @@ public class ModelToDomainProfile : Profile
 
         CreateMap<ListModel, List>()
             .ConvertUsing<ListModelDomainConverter>();
-        
+
         CreateMap<TaskListModel, TaskList>()
             .ConvertUsing<TaskListModelDomainConverter>();
     }
