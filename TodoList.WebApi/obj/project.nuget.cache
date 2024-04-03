@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XKYIAOw1fq/dP5wQdprAUVU4ZpyI1is2mCT8b+44aSQmkuo+f9+i/a7GrCf6+BOW9YxW6wYN9FVhjULXSlyBbQ==",
+  "dgSpecHash": "DqWDoC7PVQVQlyxUOZO2hKpG8XHTqosuq3tMLmPB1Nk8D/iovV0aJj7ZiQJ6b97BpSR33g2oODC2WpKd3Iu4gA==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.WebApi\\TodoList.WebApi.csproj",
   "expectedPackageFiles": [

@@ -1730,34 +1730,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\werik\\.nuget\\packages\\": {}
+    "C:\\Users\\werik.cunha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
+      "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
       "projectName": "TodoList.Repositories",
-      "projectPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
-      "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
-      "outputPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\",
+      "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
+      "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
-              "projectPath": "C:\\Desenvolvimento\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
+            "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
+              "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
             }
           }
         }
@@ -1824,39 +1823,21 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
     {
-      "code": "NU1904",
+      "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'System.Linq.Dynamic.Core' 1.2.24 tem uma crítico vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-w65q-jcmv-28gj",
-      "libraryId": "System.Linq.Dynamic.Core",
-      "targetGraphs": [
-        "net6.0"
-      ]
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
     }
   ]
 }
