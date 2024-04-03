@@ -13,14 +13,11 @@ public class List : Entity<Guid>
         SetDateCreate(dateCreate);
         SetDateUpdate(dateUpdate);
     }
-
-
     protected List()
     {
     }
 
     public string DescriptionList { get; set; }
-
     public Guid IdUser { get; set; }
     public DateTime DateCreate { get; set; }
     public DateTime DateUpdate { get; set; }
