@@ -19,4 +19,4 @@ public class TaskListModelDomainConverter : ITypeConverter<TaskListModel, TaskLi
                 .WithDone(source.Done)
                 .Build();
 }
-    
+

@@ -1,7 +1,3 @@
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using TodoList.Services.Models;
 
 namespace TodoList.Services.Abstractions;

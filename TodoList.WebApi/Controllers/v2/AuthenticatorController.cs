@@ -14,7 +14,7 @@ namespace TodoList.WebApi.Controllers.v2
         {
             _userService = userService;
         }
-        
+
         [HttpPost]
         [Route("Login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto, CancellationToken cancellationToken)
@@ -27,7 +27,7 @@ namespace TodoList.WebApi.Controllers.v2
                     return NotFound("User not found to authenticate!");
 
                 var token = TokenService.GenerateToken(user);
-               
+
                 return Ok(token);
             }
             catch

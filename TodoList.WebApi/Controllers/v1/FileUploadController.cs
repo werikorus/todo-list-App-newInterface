@@ -7,7 +7,7 @@ namespace TodoList.WebApi.Controllers.v1;
 public class FileUploadController : TodoListControllerBase
 {
     private readonly IFileUpload _fileUpload;
-        
+
     public FileUploadController(IFileUpload fileUpload)
     {
         _fileUpload = fileUpload;
@@ -21,7 +21,7 @@ public class FileUploadController : TodoListControllerBase
             var urlFile = new
             {
                 urlImage = _fileUpload.UploadBase64Image(command.Image, "user-avatar")
-            }; 
+            };
             return Ok(urlFile);
         }
         catch (Exception e)
@@ -30,7 +30,7 @@ public class FileUploadController : TodoListControllerBase
         }
 
     }
-    
+
     public class UploadImageCommand
     {
         public string Image { get; set; }

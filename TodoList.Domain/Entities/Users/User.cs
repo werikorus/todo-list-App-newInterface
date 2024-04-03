@@ -25,7 +25,7 @@ public class User : Entity<Guid>
         SetDateUpdate(dateUpdate);
     }
 
-    protected User()
+    protected User(Guid id)
     {
     }
 
@@ -68,11 +68,11 @@ public class User : Entity<Guid>
         {
             Notification.AddError(DomainResource.TodoList_Email_invalid);
             return;
-        }
+        } 
 
         Email = email;
     }
-    
+
     private void SetRole(string role)
     {
         if (string.IsNullOrEmpty(role))
@@ -88,7 +88,7 @@ public class User : Entity<Guid>
     {
         UrlAvatar = urlAvatar;
     }
-    
+
     private void SetDateCreate(DateTime dateCreate)
     {
         if (string.IsNullOrEmpty(dateCreate.ToString(CultureInfo.InvariantCulture)))

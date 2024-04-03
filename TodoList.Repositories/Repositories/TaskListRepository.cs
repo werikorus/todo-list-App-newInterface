@@ -7,6 +7,6 @@ namespace TodoList.Repositories.Repositories;
 
 public class TaskListRepository : Repository<TaskList, Guid>, ITaskListRepository
 {
-    public TaskListRepository(TodoListContext context) 
+    public TaskListRepository(TodoListContext context)
         : base(context) { }
 }

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TodoList.Domain.Entities.Users;
-using TodoList.Services.Models;
 using TodoList.Services.Interfaces;
+using TodoList.Services.Models;
 
 namespace TodoList.WebApi.Controllers.v1;
 

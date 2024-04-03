@@ -21,8 +21,8 @@ public static class Program
 
                 //var credential = new ClientSecretCredential(tenantId, clientId, clientSecretId);
 
-//                var client = new SecretClient(new Uri(kvURL), credential);
-  //              config.AddAzureKeyVault(client, new AzureKeyVaultConfigurationOptions());
+                //                var client = new SecretClient(new Uri(kvURL), credential);
+                //              config.AddAzureKeyVault(client, new AzureKeyVaultConfigurationOptions());
             })
             .ConfigureWebHostDefaults(webBuilder =>
             {

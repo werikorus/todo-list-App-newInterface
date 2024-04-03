@@ -1,6 +1,4 @@
-using System;
 using Microsoft.EntityFrameworkCore;
-using TodoList.Domain.Entities.Users;
 
 namespace TodoList.Repositories.Contexts;
 
@@ -8,11 +6,12 @@ public static class ModelBuilderExtentions
 {
     public static void Seed(this ModelBuilder modelBuilder)
     {
-         var userBuilder = new UserBuilder();
+        /*
+          var userBuilder = new UserBuilder();
 
-         /*userBuilder
-             .Entity()
-             .HasData(new List<User>
+
+        userBuilder.Entity<User>();
+            .HasData(new List<User>
              {
                  userBuilder
                      .WithId(Guid.NewGuid())

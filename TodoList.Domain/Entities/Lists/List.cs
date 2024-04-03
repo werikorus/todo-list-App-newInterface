@@ -1,5 +1,4 @@
 using TodoList.Domain.Abstraction;
-using TodoList.Domain.Entities.TasksList;
 
 
 namespace TodoList.Domain.Entities.Lists;
@@ -14,14 +13,11 @@ public class List : Entity<Guid>
         SetDateCreate(dateCreate);
         SetDateUpdate(dateUpdate);
     }
-
-
     protected List()
     {
     }
 
     public string DescriptionList { get; set; }
-    
     public Guid IdUser { get; set; }
     public DateTime DateCreate { get; set; }
     public DateTime DateUpdate { get; set; }
@@ -36,7 +32,7 @@ public class List : Entity<Guid>
 
         Id = id;
     }
-    
+
     private void SetUserId(Guid idUser)
     {
         if (idUser.Equals(Guid.Empty))

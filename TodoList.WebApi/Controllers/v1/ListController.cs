@@ -1,4 +1,3 @@
-using System.Reactive;
 using Microsoft.AspNetCore.Mvc;
 using TodoList.Services.Interfaces;
 using TodoList.Services.Models;
@@ -35,7 +34,7 @@ public class ListController : TodoListControllerBase
             return BadRequest(e);
         }
     }
-    
+
     [HttpGet("{id}")]
     public IActionResult GetById(Guid id)
     {
@@ -134,9 +133,9 @@ public class ListController : TodoListControllerBase
     [HttpDelete("UserId={userId}")]
     public IActionResult DeleteAllListsByUserId(Guid userId)
     {
-        try 
+        try
         {
-            if (!_userService.Exists(userId)) return NotFound("User not found for list delete!");
+            if (!_userService.Exists(userId)) return NotFound("User not found for delete list!");
             _listService.DeleteAllListsByUserId(userId);
             return Accepted();
         }

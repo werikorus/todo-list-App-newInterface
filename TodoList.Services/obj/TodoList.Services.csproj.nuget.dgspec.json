@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj": {}
+    "c:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
+    "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
+        "projectUniqueName": "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
         "projectName": "TodoList.Domain",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
+        "projectPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
         "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\obj\\",
+        "outputPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -70,18 +70,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.420\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
+    "c:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
+        "projectUniqueName": "c:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
         "projectName": "TodoList.Repositories",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
+        "projectPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
         "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
+        "outputPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -97,8 +97,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
+              "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
+                "projectPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
               }
             }
           }
@@ -170,18 +170,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.420\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj": {
+    "c:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
+        "projectUniqueName": "c:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
         "projectName": "TodoList.Services",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
+        "projectPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
         "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\obj\\",
+        "outputPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -197,11 +197,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
+              "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
+                "projectPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
               },
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj"
+              "c:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
+                "projectPath": "c:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj"
               }
             }
           }
@@ -287,7 +287,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.420\\RuntimeIdentifierGraph.json"
         }
       }
     }

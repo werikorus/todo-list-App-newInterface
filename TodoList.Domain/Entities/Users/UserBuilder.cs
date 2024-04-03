@@ -1,25 +1,24 @@
-using TodoList.Domain.Abstraction;
 using TodoList.Domain.Abstraction.Builders;
 
 namespace TodoList.Domain.Entities.Users;
 
-public class UserBuilder: Builder<UserBuilder, User, Guid>, IUserBuilder
+public class UserBuilder : Builder<UserBuilder, User, Guid>, IUserBuilder
 {
     private string _name;
-    
+
     private string _password;
-    
+
     private string _email;
-    
+
     private string _role;
 
     private string _urlAvatar;
-    
+
     private DateTime _dateCreate;
-    
+
     private DateTime _dateUpdate;
-    
-    
+
+
     public IUserBuilder WithName(string name)
     {
         _name = name;
@@ -63,4 +62,5 @@ public class UserBuilder: Builder<UserBuilder, User, Guid>, IUserBuilder
     }
 
     public override User Build() => new User(Id, _name, _password, _email, _role, _urlAvatar, _dateCreate, _dateUpdate);
+
 }

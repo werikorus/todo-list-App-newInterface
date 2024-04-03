@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p77pB5pQ3vTApY8yrbDJ+41Ia2R/k9y3TI/gpE7V14XvfOqPGzOhnAI9Y8ik3/ejkndmurI5GWAypzj5cfZkzw==",
+  "dgSpecHash": "6U5k3yfvAT3HeN4QMQGgrQ6s9j5k31/yvJwbOqfdccTkgsa3Bhw/AZC/r66ldrysB8Ru3VFojtAcyXMmIwN7iQ==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
+  "projectFilePath": "c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\werik.cunha\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -30,6 +30,12 @@
     "C:\\Users\\werik.cunha\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache c:\\Projetos\\C#\\TodoList\\TodoList.Domain\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1803",
       "level": "Warning",

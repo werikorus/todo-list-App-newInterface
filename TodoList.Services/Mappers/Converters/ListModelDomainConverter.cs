@@ -1,6 +1,5 @@
 using AutoMapper;
 using TodoList.Domain.Entities.Lists;
-using TodoList.Domain.Entities.TasksList;
 using TodoList.Services.Models;
 
 namespace TodoList.Services.Mappers.Converters;

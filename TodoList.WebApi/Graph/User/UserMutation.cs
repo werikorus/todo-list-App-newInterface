@@ -17,7 +17,7 @@ public class UserMutation : ObjectGraphType
                 Name = "UserInput",
                 Description = "User Object to create new register."
             }),
-        
+
         resolve: Context =>
             {
                 var user = Context.GetArgument<UserModel>("UserImput");

@@ -11,13 +11,13 @@ public class ListBuilder : Builder<ListBuilder, List, Guid>, IListBuilder
     private DateTime _dateUpdate;
 
     private Guid _idUser;
-    
+
     public IListBuilder WithDescriptionList(string descriptionList)
     {
         _descriptionList = descriptionList;
         return this;
     }
-    
+
 
     public IListBuilder WithDateCreate(DateTime dateCreate)
     {
@@ -36,6 +36,6 @@ public class ListBuilder : Builder<ListBuilder, List, Guid>, IListBuilder
         _idUser = idUser;
         return this;
     }
-    
+
     public override List Build() => new List(Id, _idUser, _descriptionList, _dateCreate, _dateUpdate);
 }

@@ -4,4 +4,4 @@ using TodoList.Services.Models;
 
 namespace TodoList.Services.Interfaces;
 
-public interface IUserService : IService<User, UserModel, Guid> {}
+public interface IUserService : IService<User, UserModel, Guid> { }

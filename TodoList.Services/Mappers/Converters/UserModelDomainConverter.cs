@@ -6,8 +6,8 @@ namespace TodoList.Services.Mappers.Converters;
 
 public class UserModelDomainConverter : ITypeConverter<UserModel, User>
 {
-    public User Convert(UserModel source, User destination, ResolutionContext context) 
-        => source is null || context is null 
+    public User Convert(UserModel source, User destination, ResolutionContext context)
+        => source is null || context is null
             ? default
             : new UserBuilder()
                 .WithId(source.Id ?? Guid.NewGuid())

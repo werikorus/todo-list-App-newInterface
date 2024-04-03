@@ -9,12 +9,12 @@ namespace TodoList.WebApi.Controllers.v1
     public class AuthenticatorController : TodoListControllerBase
     {
         private readonly IUserService _userService;
-        
+
         public AuthenticatorController(IUserService userService)
         {
             _userService = userService;
         }
-        
+
         [HttpPost]
         [Route("Login")]
         public IActionResult Login([FromBody] LoginDto dto)
@@ -27,7 +27,7 @@ namespace TodoList.WebApi.Controllers.v1
                     return NotFound("User not found to authenticate!");
 
                 var token = TokenService.GenerateToken(user);
-               
+
                 return Ok(token);
             }
             catch

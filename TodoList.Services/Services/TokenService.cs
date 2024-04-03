@@ -24,7 +24,7 @@ public class TokenService
             Expires = DateTime.UtcNow.AddHours(2),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
-        
+
         var token = tokenHandler.CreateToken(tokenDescriptor);
         var response = new
         {
@@ -32,6 +32,6 @@ public class TokenService
             expires_in = "2 Hours",
             access_token = tokenHandler.WriteToken(token),
         };
-        return response; 
+        return response;
     }
 }

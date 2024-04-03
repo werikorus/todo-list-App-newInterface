@@ -11,9 +11,9 @@ namespace TodoList.Repositories.Ioc;
 public static class IoCRepositories
 {
     public static IServiceCollection AddDbContext(this IServiceCollection services, IConfiguration configuration)
-        => services.AddDbContext<TodoListContext>(dbcontextoptions 
+        => services.AddDbContext<TodoListContext>(dbcontextoptions
             => dbcontextoptions.UseLazyLoadingProxies()
-                .UseSqlite(configuration.GetConnectionString("DefaultConnection"), sqliteOptions 
+                .UseSqlite(configuration.GetConnectionString("DefaultConnection"), sqliteOptions
                     => sqliteOptions.MigrationsAssembly(typeof(TodoListContext).Assembly.GetName().Name)));
 
     public static void AddRepository(this IServiceCollection services)

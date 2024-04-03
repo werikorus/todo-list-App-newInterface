@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rVTB+IFabWDudKo7WuPF/3YsUWg1OxaQgxpCmT2yUTnCzVKfYfFPkbeSBJw8ie3M8QKPcy/67nQhUmZDXRRmYw==",
+  "dgSpecHash": "2d+MbQkwnAmcCIVOQ14/u6obg/lNeWKabPlfWpDPRcYl9fqR7YRHKJgmsNeuV5yBDisttT/FuDd9aH5+28SWfw==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
+  "projectFilePath": "c:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\werik.cunha\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\werik.cunha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
@@ -94,6 +94,12 @@
     "C:\\Users\\werik.cunha\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache c:\\Projetos\\C#\\TodoList\\TodoList.Services\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1803",
       "level": "Warning",
