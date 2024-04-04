@@ -15,7 +15,7 @@ public class UserController : TodoListControllerBase
         _userService = userService;
     }
 
-    [HttpGet("{userId}")]
+    [HttpGet("userId={userId}")]
     public async Task<IActionResult> GetByUserIdAsync(Guid userId, CancellationToken cancellationToken)
     {
         try
@@ -36,7 +36,7 @@ public class UserController : TodoListControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<User>>> GetAllAsync(CancellationToken cancellationToken)
+    public async Task<ActionResult<IEnumerable<User>>> GetAllUsersAsync(CancellationToken cancellationToken)
     {
         try
         {
@@ -52,7 +52,7 @@ public class UserController : TodoListControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostAsync([FromBody] UserModel model, CancellationToken cancellationToken)
+    public async Task<IActionResult> InsertNewUserAsync([FromBody] UserModel model, CancellationToken cancellationToken)
     {
         try
         {
@@ -72,14 +72,14 @@ public class UserController : TodoListControllerBase
         }
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutAsync(Guid id, [FromBody] UserModel model, CancellationToken cancellationToken)
+    [HttpPut("userId={userId}")]
+    public async Task<IActionResult> UpdateUserAsync(Guid userId, [FromBody] UserModel model, CancellationToken cancellationToken)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier");
-            if (model?.Id == id) return UnprocessableEntity("Identifier diverges from solicited object!");
-            if (await _userService.ExistsAsync(id, cancellationToken) == false) return NotFound();
+            if (Guid.Empty == userId) return BadRequest("Invalid Identifier");
+            if (model?.Id == userId) return UnprocessableEntity("Identifier diverges from solicited object!");
+            if (await _userService.ExistsAsync(userId, cancellationToken) == false) return NotFound();
 
             var user = await _userService.EditAsync(model, cancellationToken);
             if (!user.Valid()) return BadRequest("Notification.GetErrors()");
@@ -92,14 +92,14 @@ public class UserController : TodoListControllerBase
         }
     }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteAsync(Guid id, CancellationToken cancellationToken)
+    [HttpDelete("userId={id}")]
+    public async Task<IActionResult> DeleteUserAsync(Guid userId, CancellationToken cancellationToken)
     {
         try
         {
-            if (!await _userService.ExistsAsync(id, cancellationToken)) return NotFound();
+            if (!await _userService.ExistsAsync(userId, cancellationToken)) return NotFound();
 
-            await _userService.DeleteAsync(id, cancellationToken);
+            await _userService.DeleteAsync(userId, cancellationToken);
             return Accepted("Deletion Sucessfully!");
         }
         catch (Exception e)

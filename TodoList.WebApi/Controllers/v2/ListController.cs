@@ -8,20 +8,20 @@ namespace TodoList.WebApi.Controllers.v2;
 public class ListController : TodoListControllerBase
 {
     private readonly IListService _listService;
-
+    
     public ListController(IListService listService)
-    {
+    {   
         _listService = listService;
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+    [HttpGet("listId={listId}")]
+    public async Task<IActionResult> GetByIdAsync(Guid listId, CancellationToken cancellationToken)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+            if (Guid.Empty == listId) return BadRequest("Invalid Identifier!");
 
-            var list = await _listService.GetByIdAsync(id, cancellationToken);
+            var list = await _listService.GetByIdAsync(listId, cancellationToken);
 
             return (list is null)
                 ? NotFound("List not found!")
@@ -54,13 +54,13 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutAsync(Guid id, [FromBody] ListModel model, CancellationToken cancellationToken)
+    [HttpPut("listId={listId}")]
+    public async Task<IActionResult> PutAsync(Guid listId, [FromBody] ListModel model, CancellationToken cancellationToken)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
-            if (model?.Id != id) return UnprocessableEntity("Identifier diverges from solicited object!");
+            if (Guid.Empty == listId) return BadRequest("Invalid Identifier!");
+            if (model?.Id != listId) return UnprocessableEntity("Identifier diverges from solicited object!");
             if (!await _listService.ExistsAsync(model.Id.Value, cancellationToken)) return NotFound();
 
             var list = await _listService.EditAsync(model, cancellationToken);
@@ -74,14 +74,14 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken)
+    [HttpDelete("listId={listId}")]
+    public async Task<IActionResult> Delete(Guid listId, CancellationToken cancellationToken)
     {
         try
         {
-            if (!await _listService.ExistsAsync(id, cancellationToken)) return NotFound("List not found!");
+            if (!await _listService.ExistsAsync(listId, cancellationToken)) return NotFound("List not found!");
 
-            await _listService.DeleteAsync(id, cancellationToken);
+            await _listService.DeleteAsync(listId, cancellationToken);
 
             return Accepted("Deletion sucessfully");
         }

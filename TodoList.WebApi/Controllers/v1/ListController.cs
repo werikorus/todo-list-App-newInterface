@@ -16,7 +16,7 @@ public class ListController : TodoListControllerBase
         _userService = userService;
     }
 
-    [HttpGet("UserId={userId}")]
+    [HttpGet("userId={userId}")]
     public IActionResult GetListsByUserId(Guid userId)
     {
         try
@@ -35,8 +35,8 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpGet("{listId}")]
-    public IActionResult GetListById(Guid listId)
+    [HttpGet("listId={listId}")]
+    public IActionResult GetListByListId(Guid listId)
     {
         try
         {
@@ -65,7 +65,7 @@ public class ListController : TodoListControllerBase
             var list = _listService.Save(model);
             if (!list.Valid()) return BadRequest(list.Notification.GetErrors);
 
-            return CreatedAtAction(nameof(GetListById),
+            return CreatedAtAction(nameof(GetListByListId),
                 new
                 {
                     Id = list.Id,
@@ -78,8 +78,8 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpPut("{listId}")]
-    public IActionResult Put(Guid id, [FromBody] ListModel model)
+    [HttpPut("listId={listId}")]
+    public IActionResult UpdateList(Guid id, [FromBody] ListModel model)
     {
         try
         {
@@ -99,12 +99,12 @@ public class ListController : TodoListControllerBase
     }
 
     [HttpDelete("listId={listId}")]
-    public IActionResult Delete(Guid id)
+    public IActionResult DeleteList(Guid listId)
     {
         try
         {
-            if (!_listService.Exists(id)) return NotFound("List not found!");
-            _listService.Delete(id);
+            if (!_listService.Exists(listId)) return NotFound("List not found!");
+            _listService.Delete(listId);
             return Accepted("Deletion sucessfully");
         }
         catch (Exception e)
@@ -113,7 +113,7 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpDelete("UserId={userId}")]
+    [HttpDelete("userId={userId}")]
     public IActionResult DeleteAllListsByUserId(Guid userId)
     {
         try
