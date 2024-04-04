@@ -6,7 +6,7 @@ namespace TodoList.Services.Mappers.Converters;
 
 public class TaskListModelDomainConverter : ITypeConverter<TaskListModel, TaskList>
 {
-    public TaskList Convert(TaskListModel source, TaskList destination, ResolutionContext context)
+    public TaskList? Convert(TaskListModel? source, TaskList destination, ResolutionContext? context)
         => source is null || context is null
             ? default
             : new TaskListBuilder()

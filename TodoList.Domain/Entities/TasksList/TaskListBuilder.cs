@@ -7,7 +7,7 @@ public class TaskListBuilder : Builder<TaskListBuilder, TaskList, Guid>, ITasksL
     private Guid _idList { get; set; }
     private Guid _idUser { get; set; }
     private string _descriptionTask { get; set; }
-    private bool _done { get; set; }
+    private int _done { get; set; }
     private DateTime _dateCreate { get; set; }
     private DateTime _dateUpdate { get; set; }
 
@@ -23,7 +23,7 @@ public class TaskListBuilder : Builder<TaskListBuilder, TaskList, Guid>, ITasksL
         return this;
     }
 
-    public ITasksListBuilder WithDone(bool done)
+    public ITasksListBuilder WithDone(int done)
     {
         _done = done;
         return this;
