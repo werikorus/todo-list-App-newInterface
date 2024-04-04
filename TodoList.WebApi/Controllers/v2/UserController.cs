@@ -15,14 +15,14 @@ public class UserController : TodoListControllerBase
         _userService = userService;
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+    [HttpGet("{userId}")]
+    public async Task<IActionResult> GetByUserIdAsync(Guid userId, CancellationToken cancellationToken)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+            if (Guid.Empty == userId) return BadRequest("Invalid Identifier!");
 
-            var user = await _userService.GetByIdAsync(id, cancellationToken);
+            var user = await _userService.GetByIdAsync(userId, cancellationToken);
 
             if (user is null) return NotFound("User not found!");
             if (!user.Valid()) return BadRequest("Notification.GetErrors()");
@@ -62,7 +62,7 @@ public class UserController : TodoListControllerBase
             var user = await _userService.SaveAsync(model, cancellationToken);
             if (user.Valid() == false) return BadRequest("Notification.GetErrors()");
 
-            var userResult = await GetByIdAsync(user.Id, cancellationToken);
+            var userResult = await GetByUserIdAsync(user.Id, cancellationToken);
 
             return Ok(userResult);
         }

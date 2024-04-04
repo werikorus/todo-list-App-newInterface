@@ -16,14 +16,14 @@ public class ListController : TodoListControllerBase
         _userService = userService;
     }
 
-    [HttpGet("UserId/{id}")]
-    public IActionResult GetListsByUserId(Guid id)
+    [HttpGet("UserId={userId}")]
+    public IActionResult GetListsByUserId(Guid userId)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+            if (Guid.Empty == userId) return BadRequest("Invalid Identifier!");
 
-            var list = _listService.GetListsByUserId(id);
+            var list = _listService.GetListsByUserId(userId);
 
             return (list is null)
                 ? NotFound("List not found!")
@@ -35,35 +35,18 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(Guid id)
+    [HttpGet("{listId}")]
+    public IActionResult GetListById(Guid listId)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+            if (Guid.Empty == listId) return BadRequest("Invalid Identifier!");
 
-            var list = _listService.GetById(id);
+            var list = _listService.GetById(listId);
 
             return (list is null)
                 ? NotFound("List not found!")
                 : Ok(list);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e);
-        }
-    }
-
-    [HttpGet]
-    public IActionResult GetAll()
-    {
-        try
-        {
-            var lists = _listService.GetAll();
-
-            return (lists.Count == 0)
-                ? NotFound("There's not any list on the database. Create the first one!")
-                : Ok(lists);
         }
         catch (Exception e)
         {
@@ -82,7 +65,7 @@ public class ListController : TodoListControllerBase
             var list = _listService.Save(model);
             if (!list.Valid()) return BadRequest(list.Notification.GetErrors);
 
-            return CreatedAtAction(nameof(GetById),
+            return CreatedAtAction(nameof(GetListById),
                 new
                 {
                     Id = list.Id,
@@ -95,7 +78,7 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{listId}")]
     public IActionResult Put(Guid id, [FromBody] ListModel model)
     {
         try
@@ -115,7 +98,7 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("listId={listId}")]
     public IActionResult Delete(Guid id)
     {
         try

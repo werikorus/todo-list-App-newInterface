@@ -8,41 +8,24 @@ namespace TodoList.WebApi.Controllers.v2;
 public class TaskListController : TodoListControllerBase
 {
     private readonly ITasksListService _taskListService;
-
     public TaskListController(ITasksListService taskListService)
     {
         _taskListService = taskListService;
     }
-
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+    
+    [HttpGet("ListId={idList}&UserId={idUser}")]
+    public async Task<IActionResult> GetByListIdAndUserIdAsync(Guid idList, Guid idUser, CancellationToken cancellationToken)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+            if (Guid.Empty == idUser && Guid.Empty == idList)
+                return BadRequest("Invalid Identifier!");
 
-            var task = await _taskListService.GetByIdAsync(id, cancellationToken);
+            var task = await _taskListService.GetTasksByListIdAndUserIdAsync(idList, idUser, cancellationToken);
 
             return (task is null)
-                ? NotFound("List not found!")
+                ? NotFound("Task not found!")
                 : Ok(task);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e);
-        }
-    }
-
-    [HttpGet]
-    public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
-    {
-        try
-        {
-            var tasks = await _taskListService.GetAllAsync(cancellationToken);
-
-            return (tasks.Count == 0)
-                ? NotFound()
-                : Ok(tasks);
         }
         catch (Exception e)
         {

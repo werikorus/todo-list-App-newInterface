@@ -33,23 +33,6 @@ public class ListController : TodoListControllerBase
         }
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
-    {
-        try
-        {
-            var lists = await _listService.GetAllAsync(cancellationToken);
-
-            return (lists.Count == 0)
-                ? NotFound("Users not found!")
-                : Ok(lists);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e);
-        }
-    }
-
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] ListModel model, CancellationToken cancellationToken)
     {

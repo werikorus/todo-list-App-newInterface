@@ -92,6 +92,9 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
 
     public IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser)
         => _repository.GetTasksByListIdAndUserId(idList, idUser);
+    
+    public async Task<IList<TaskList>> GetTasksByListIdAndUserIdAsync(Guid idList, Guid idUser, CancellationToken cancellationToken)
+        => await _repository.GetTasksByListIdAndUserIdAsync(idList, idUser, cancellationToken);
 
     public async Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken)
         => await _repository.GetTasksByUserIdAsync(userId, cancellationToken);

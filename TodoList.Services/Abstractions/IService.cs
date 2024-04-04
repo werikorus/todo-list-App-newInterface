@@ -45,6 +45,8 @@ public interface IService<TEntity, in TModel, in TId>
 
     IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser);
 
+    Task<IList<TaskList>> GetTasksByListIdAndUserIdAsync(Guid idList, Guid idUser, CancellationToken cancellationToken);
+
     Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken);
 
     void DeleteAllListsByUserId(Guid userId);
