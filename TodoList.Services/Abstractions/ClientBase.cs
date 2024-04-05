@@ -14,7 +14,6 @@ public abstract class ClientBase<TClientModel>
 
     protected abstract string ClientName { get; }
     protected abstract string EndPoint { get; }
-
     public async Task<TClientModel> GetAsync(CancellationToken cancellationToken)
     {
         var responseMessage = await GetClient().GetAsync(EndPoint, cancellationToken);
