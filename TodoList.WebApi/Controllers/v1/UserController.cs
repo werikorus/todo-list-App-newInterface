@@ -14,14 +14,14 @@ public class UserController : TodoListControllerBase
         _userService = userService;
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(Guid id)
+    [HttpGet("{userId}")]
+    public IActionResult GetById(Guid userId)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier!");
+            if (Guid.Empty == userId) return BadRequest("Invalid Identifier!");
 
-            var user = _userService.GetById(id);
+            var user = _userService.GetById(userId);
 
             return (user is null)
                 ? NoContent()
@@ -33,7 +33,7 @@ public class UserController : TodoListControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpGet] 
     public ActionResult<IEnumerable<User>> GetAll()
     {
         try

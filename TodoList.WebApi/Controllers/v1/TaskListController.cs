@@ -8,14 +8,13 @@ namespace TodoList.WebApi.Controllers.v1;
 public class TaskListController : TodoListControllerBase
 {
     private readonly ITasksListService _taskListService;
-
     public TaskListController(ITasksListService taskListService)
     {
         _taskListService = taskListService;
     }
 
     [HttpGet("ListId={idList}&UserId={idUser}")]
-    public IActionResult GetById(Guid idList, Guid idUser)
+    public IActionResult GetByListIdAndUserId(Guid idList, Guid idUser)
     {
         try
         {
@@ -45,7 +44,7 @@ public class TaskListController : TodoListControllerBase
             var task = _taskListService.Save(model);
             if (!task.Valid()) return BadRequest(task.Notification.GetErrors);
 
-            return CreatedAtAction(nameof(GetById),
+            return CreatedAtAction(nameof(GetByListIdAndUserId),
                 new { Id = task.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, task);
         }
         catch (Exception e)

@@ -87,14 +87,11 @@ public abstract class Service<TEntity, TModel, TId> : IService<TEntity, TModel, 
     public IList<List> GetListsByUserId(Guid userId)
         => _repository.GetListsByUserId(userId);
 
-    public async Task<IList<List>> GetListsByUserIdAsync(Guid userId, CancellationToken cancellationToken)
-        => await _repository.GetListsByUserIdAsync(userId, cancellationToken);
-
     public IList<TaskList> GetTasksByListIdAndUserId(Guid idList, Guid idUser)
         => _repository.GetTasksByListIdAndUserId(idList, idUser);
-
-    public async Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken)
-        => await _repository.GetTasksByUserIdAsync(userId, cancellationToken);
+    
+    public async Task<IList<TaskList>> GetTasksByListIdAndUserIdAsync(Guid idList, Guid idUser, CancellationToken cancellationToken)
+        => await _repository.GetTasksByListIdAndUserIdAsync(idList, idUser, cancellationToken);
 
     public void DeleteAllListsByUserId(Guid userId)
     {
