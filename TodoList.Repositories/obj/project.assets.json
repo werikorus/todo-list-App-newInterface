@@ -1735,19 +1735,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
-      "projectName": "TodoList.Repositories",
-      "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
-      "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
-=======
       "projectUniqueName": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
       "projectName": "TodoList.Repositories",
       "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
       "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
       "outputPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\",
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1764,13 +1756,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-              "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
-=======
             "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
               "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
             }
           }
         }
@@ -1862,12 +1849,12 @@
   },
   "logs": [
     {
-<<<<<<< HEAD
-      "code": "NU1803",
+      "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-=======
+      "message": "Problema ao ler o arquivo de cache C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
       "code": "NU1904",
       "level": "Warning",
       "warningLevel": 1,
@@ -1876,7 +1863,6 @@
       "targetGraphs": [
         "net6.0"
       ]
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
     }
   ]
 }

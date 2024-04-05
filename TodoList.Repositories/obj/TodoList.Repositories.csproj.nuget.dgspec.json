@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {}
-  },
-  "projects": {
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
-        "projectName": "TodoList.Domain",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
-        "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\obj\\",
-=======
     "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj",
         "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
         "outputPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\obj\\",
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,16 +89,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
-        "projectName": "TodoList.Repositories",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
-        "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
-=======
     "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -121,7 +97,6 @@
         "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
         "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
         "outputPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\",
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -138,13 +113,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
-=======
               "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
                 "projectPath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
               }
             }
           }

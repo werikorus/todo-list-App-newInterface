@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "SWLwIsDZNPBAWxqBnYaxiErg/gMrTQV7lxH1lUblGPnycsK+zERCH7uthypU6gI66aP3TY8vooymiGqVFG/6tA==",
-  "success": true,
-  "projectFilePath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
-=======
   "dgSpecHash": "4eamxvgVAat0LByiFX86msBao81POxC1ffbpeXgC+/TXUcmmt7tzo5WIiVvQ4No5wcx+ALezbJKvteCvEw+3Nw==",
   "success": true,
   "projectFilePath": "C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
   "expectedPackageFiles": [
     "C:\\Users\\werik\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\werik\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
@@ -53,12 +47,12 @@
   ],
   "logs": [
     {
-<<<<<<< HEAD
-      "code": "NU1803",
+      "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-=======
+      "message": "Problema ao ler o arquivo de cache C:\\Desenvolvimento\\BackEnd\\C#\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
       "code": "NU1904",
       "level": "Warning",
       "warningLevel": 1,
@@ -67,7 +61,6 @@
       "targetGraphs": [
         "net6.0"
       ]
->>>>>>> 471cca7dc9e75c3f6918bc4ef1c3db8eacbae92f
     }
   ]
 }
