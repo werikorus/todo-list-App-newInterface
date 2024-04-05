@@ -42,10 +42,14 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
     }
 
     public IList<TEntity> SelectAll()
-        => _context.Set<TEntity>().ToList();
+        => _context
+            .Set<TEntity>()
+            .ToList();
 
     public async Task<IList<TEntity>> SelectAllAsync(CancellationToken cancellationToken)
-        => await _context.Set<TEntity>().ToListAsync();
+        => await _context
+            .Set<TEntity>()
+            .ToListAsync(cancellationToken);
 
     public TEntity SelectById(TId id)
         => _dbSet.Find(id);
@@ -92,7 +96,9 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
     {
         var user = await _context
             .Set<User>()
-            .FirstOrDefaultAsync(x => x.Email.ToUpper() == email.ToUpper() && x.Password == passsword, cancellationToken: cancellationToken);
+            .FirstOrDefaultAsync(x => 
+                x.Email.ToUpper() == email.ToUpper() 
+                && x.Password == passsword, cancellationToken);
 
         return user;
     }
@@ -112,7 +118,7 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
         var lists = await _context
             .Set<List>()
             .Where(x => x.IdUser == userId)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         return lists;
     }
@@ -127,12 +133,22 @@ public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
         return tasks;
     }
 
+    public async Task<IList<TaskList>> GetTasksByListIdAndUserIdAsync(Guid idList, Guid idUser, CancellationToken cancellationToken)
+    {
+        var tasks = await _context
+            .Set<TaskList>()
+            .Where(x => x.IdList == idList && x.IdUser == idUser)
+            .ToListAsync(cancellationToken);
+
+        return tasks;
+    }
+    
     public async Task<IList<TaskList>> GetTasksByUserIdAsync(Guid userId, CancellationToken cancellationToken)
     {
         var tasks = await _context
             .Set<TaskList>()
             .Where(x => x.IdUser == userId)
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
         return tasks;
     }

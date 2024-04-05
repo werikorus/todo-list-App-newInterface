@@ -67,7 +67,7 @@ namespace TodoList.Repositories.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("DescriptionTask");
 
-                    b.Property<bool>("Done")
+                    b.Property<int>("Done")
                         .HasColumnType("INTEGER")
                         .HasColumnName("Done");
 
@@ -114,13 +114,11 @@ namespace TodoList.Repositories.Migrations
 
                     b.Property<string>("Role")
                         .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Role");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UrlAvatar")
                         .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("UrlAvatar");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

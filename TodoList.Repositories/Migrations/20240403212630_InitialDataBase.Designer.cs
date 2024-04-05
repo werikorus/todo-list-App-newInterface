@@ -11,8 +11,8 @@ using TodoList.Repositories.Contexts;
 namespace TodoList.Repositories.Migrations
 {
     [DbContext(typeof(TodoListContext))]
-    [Migration("20230226011119_Initial")]
-    partial class Initial
+    [Migration("20240403212630_InitialDataBase")]
+    partial class InitialDataBase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,7 +70,7 @@ namespace TodoList.Repositories.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("DescriptionTask");
 
-                    b.Property<bool>("Done")
+                    b.Property<int>("Done")
                         .HasColumnType("INTEGER")
                         .HasColumnName("Done");
 
@@ -116,6 +116,10 @@ namespace TodoList.Repositories.Migrations
                         .HasColumnName("Password");
 
                     b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UrlAvatar")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TodoList.Repositories.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialDataBase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,7 +34,7 @@ namespace TodoList.Repositories.Migrations
                     IdList = table.Column<Guid>(type: "TEXT", nullable: false),
                     IdUser = table.Column<Guid>(type: "TEXT", nullable: false),
                     DescriptionTask = table.Column<string>(type: "TEXT", nullable: false),
-                    Done = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Done = table.Column<int>(type: "INTEGER", nullable: false),
                     DateCreate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     DateUpdate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
