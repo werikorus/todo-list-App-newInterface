@@ -4,7 +4,7 @@ namespace TodoList.Domain.Entities.TasksList;
 
 public class TaskList : Entity<Guid>
 {
-    internal TaskList(Guid id, Guid idList, Guid idUser, string descriptionTask, bool done, DateTime dateCreate, DateTime dateUpdate)
+    internal TaskList(Guid id, Guid idList, Guid idUser, string descriptionTask, int done, DateTime dateCreate, DateTime dateUpdate)
     {
         SetId(id);
         SetIdList(idList);
@@ -48,7 +48,7 @@ public class TaskList : Entity<Guid>
         DescriptionTask = descriptionTask;
     }
 
-    private void SetDone(bool done)
+    private void SetDone(int done)
     {
         if (done.Equals(Guid.Empty))
         {

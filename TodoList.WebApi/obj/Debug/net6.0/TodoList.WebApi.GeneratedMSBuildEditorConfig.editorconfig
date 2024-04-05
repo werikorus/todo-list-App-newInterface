@@ -9,6 +9,7 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TodoList.WebApi
 build_property.RootNamespace = TodoList.WebApi
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Desenvolvimento\BackEnd\C#\todo-list-App-newInterface\TodoList.WebApi\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
@@ -16,4 +17,11 @@ build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Desenvolvimento\BackEnd\C#\todo-list-App-newInterface\TodoList.WebApi
+=======
+build_property.ProjectDir = C:\Projetos\C#\TodoList\TodoList.WebApi\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Projetos\C#\TodoList\TodoList.WebApi
+>>>>>>> b31fe316d241ee28eefe29e363bf300dd2a2233e
 build_property._RazorSourceGeneratorDebug = 
