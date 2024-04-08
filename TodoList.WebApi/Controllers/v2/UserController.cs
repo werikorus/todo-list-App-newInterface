@@ -92,7 +92,7 @@ public class UserController : TodoListControllerBase
         }
     }
 
-    [HttpDelete("userId={id}")]
+    [HttpDelete("userId={userId}")]
     public async Task<IActionResult> DeleteUserAsync(Guid userId, CancellationToken cancellationToken)
     {
         try

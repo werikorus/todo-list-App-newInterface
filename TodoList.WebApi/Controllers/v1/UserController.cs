@@ -14,8 +14,8 @@ public class UserController : TodoListControllerBase
         _userService = userService;
     }
 
-    [HttpGet("{userId}")]
-    public IActionResult GetById(Guid userId)
+    [HttpGet("userId={userId}")]
+    public IActionResult GetByUserId(Guid userId)
     {
         try
         {
@@ -34,7 +34,7 @@ public class UserController : TodoListControllerBase
     }
 
     [HttpGet] 
-    public ActionResult<IEnumerable<User>> GetAll()
+    public ActionResult<IEnumerable<User>> GetAllUsers()
     {
         try
         {
@@ -51,7 +51,7 @@ public class UserController : TodoListControllerBase
     }
 
     [HttpPost]
-    public IActionResult Post([FromBody] UserModel model)
+    public IActionResult InsertNewUser([FromBody] UserModel model)
     {
         try
         {
@@ -62,7 +62,7 @@ public class UserController : TodoListControllerBase
             if (user.Valid() == false)
                 return BadRequest(user.Notification.GetErrors);
 
-            return CreatedAtAction(nameof(GetById),
+            return CreatedAtAction(nameof(GetByUserId),
                 new { Id = user.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() }, user);
         }
         catch (Exception e)
@@ -71,15 +71,15 @@ public class UserController : TodoListControllerBase
         }
     }
 
-    [HttpPut("{id}")]
-    public IActionResult Put(Guid id, [FromBody] UserModel model)
+    [HttpPut("userId={userId}")]
+    public IActionResult UpdateUser(Guid userId, [FromBody] UserModel model)
     {
         try
         {
-            if (Guid.Empty == id) return BadRequest("Invalid Identifier");
-            if (model?.Id == id) return UnprocessableEntity("Identifier diverges from solicited object!");
+            if (Guid.Empty == userId) return BadRequest("Invalid Identifier");
+            if (model?.Id == userId) return UnprocessableEntity("Identifier diverges from solicited object!");
 
-            if (_userService.Exists(id) == false) return NotFound();
+            if (_userService.Exists(userId) == false) return NotFound();
 
             var user = _userService.Edit(model);
 
@@ -93,14 +93,14 @@ public class UserController : TodoListControllerBase
         }
     }
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(Guid id)
+    [HttpDelete("userId={userId}")]
+    public IActionResult DeleteUser(Guid userId)
     {
         try
         {
-            if (_userService.Exists(id) == false) return NotFound();
+            if (_userService.Exists(userId) == false) return NotFound();
 
-            _userService.Delete(id);
+            _userService.Delete(userId);
             return Accepted("Deletion sucessfully");
         }
         catch (Exception e)
