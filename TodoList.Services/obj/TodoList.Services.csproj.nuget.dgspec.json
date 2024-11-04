@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj": {}
+    "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
+    "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj",
         "projectName": "TodoList.Domain",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj",
-        "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\obj\\",
+        "projectPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj",
+        "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,40 +66,55 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
+    "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
         "projectName": "TodoList.Repositories",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj",
-        "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj",
+        "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
+              "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
+                "projectPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
               }
             }
           }
@@ -165,43 +181,58 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj": {
+    "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
+        "projectUniqueName": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
         "projectName": "TodoList.Services",
-        "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\TodoList.Services.csproj",
-        "packagesPath": "C:\\Users\\werik.cunha\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Services\\obj\\",
+        "projectPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Services\\TodoList.Services.csproj",
+        "packagesPath": "C:\\Users\\werik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\werik.cunha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\werik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "http://artifactory.softplan.com.br/artifactory/api/nuget/v3/nuget-local": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Domain\\TodoList.Domain.csproj"
+              "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj": {
+                "projectPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Domain\\TodoList.Domain.csproj"
               },
-              "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj": {
-                "projectPath": "C:\\Projetos\\C#\\TodoList\\TodoList.Repositories\\TodoList.Repositories.csproj"
+              "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj": {
+                "projectPath": "C:\\Users\\werik\\OneDrive\\Documentos\\GitHub\\todo-list-App-newInterface\\TodoList.Repositories\\TodoList.Repositories.csproj"
               }
             }
           }
@@ -282,12 +313,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
